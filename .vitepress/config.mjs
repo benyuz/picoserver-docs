@@ -23,6 +23,12 @@ export default defineConfig({
           { text: '缓存机制 (ETag)', link: '/http-cache' },
           { text: 'PicoServer.Nano (ESP32)', link: '/pico-nano' }
         ]
+      },
+      {
+        text: '📋 版本演进',
+        items: [
+          { text: '更新日志 (Changelog)', link: '/changelog' }
+        ]
       }
     ],
     socialLinks: [
