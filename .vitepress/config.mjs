@@ -37,15 +37,15 @@ export default defineConfig({
         // ⭐ 性能测试精简合并为一个独立页面，无子级折叠，更直观
         text: '🚀 性能测试报告',
         items: [
-          { text: '基准测试与吞吐量报告', link: '/perf-test' }
+          { text: '开发者基准测试', link: '/benchmark' }
         ]
       },
       {
-        text: '📟 PicoServer.Nano (ESP32)',
+        text: '📟 PicoServer.Nano',
         collapsed: true, // 默认折叠
         items: [
-          { text: 'ESP32 快速上手示例', link: '/pico-nano-guide' },
-          { text: '硬件级性能调优报告', link: '/pico-nano-perf' }
+          { text: 'ESP32 快速上手示例', link: '/picoserver-nano-guide' },
+          { text: '开发者基准测试', link: '/picoserver-nano-benchmark' }
         ]
       },
       {
