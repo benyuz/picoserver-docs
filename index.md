@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "PicoServer"
-  text: "轻量级 .NET Web 能力基础胶水库"
+  text: "轻量级 .NET Web 基础能力胶水库"
   tagline: "跨平台、高性能、零依赖、AOT、极简开发。"
   actions:
     - theme: brand
