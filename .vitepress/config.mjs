@@ -7,7 +7,8 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '技术文档', link: '/quick-start' }
+      { text: '使用文档', link: '/quick-start' },
+      { text: '更新日志', link: '/changelog' }
     ],
     sidebar: [
       {
