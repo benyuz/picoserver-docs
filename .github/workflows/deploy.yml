@@ -1,0 +1,42 @@
+name: 自动编译并部署 PicoServer 文档
+
+on:
+  push:
+    branches:
+      - main  # 如果你的分支叫 master，这里就改成 master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. 检查代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: 2. 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 3. 安装 VitePress 依赖
+        run: npm install vitepress --save-dev
+      - name: 4. 运行编译
+        run: npx vitepress build
+      - name: 5. 上传产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .vitepress/dist
+      - name: 6. 正式发布
+        id: deployment
+        uses: actions/deploy-pages@v4
