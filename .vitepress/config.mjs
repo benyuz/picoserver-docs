@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "PicoServer",
-  description: "高性能轻量级 .NET Web 基础设施",
+  title: "PicoServer 官方文档",
+  description: "高性能轻量级 .NET Web 能力胶水库",
   base: '/', 
   themeConfig: {
     nav: [
