@@ -7,15 +7,15 @@ hero:
   tagline: "跨平台、高性能、零依赖、AOT、极简开发。"
   actions:
     - theme: brand
-      text: 🚀 开启嵌入之旅
-      link: /quick-start
+      text: 🚀 开始探索
+      link: /cs-guide
     - theme: alt
       text: 在 GitHub 上查看
       link: https://github.com/benyuz/picoserver-cn
 
 features:
-  - title: 📦 极致轻量 (仅 60kb)
-    details: 单 DLL 仅几十kb，无任何第三方依赖。开箱即用零配置，老旧项目无需修改原有业务代码。
+  - title: 📦 极致轻量 (仅几十 kb)
+    details: 单 DLL 仅几十 kb，无任何第三方依赖。开箱即用零配置，老旧项目无需修改原有业务代码。
   - title: ⚡ 编译期决议 (Native AOT)
     details: 全异步非阻塞架构，完全摒弃运行时反射，原生支持 Native AOT 编译，毫秒级启动。
   - title: 🌍 完美兼容 (.NET Standard 2.0)
