@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "PicoServer"
-  text: "轻量级 .NET Web 基础能力胶水库"
+  text: "轻量级 .NET Web 能力胶水库"
   tagline: "跨平台、高性能、零依赖、AOT、极简开发。"
   actions:
     - theme: brand
@@ -22,11 +22,47 @@ features:
     details: 完美支持 .NET Framework 4.6.1+、Core、.NET 5/6/8+，跨平台支持 Linux、Windows、macOS。
 ---
 
+## 🧩 一行代码添加 WebAPI
+
+❤️ 像调用方法一样自然
+
+::: code-group
+
+```csharp [C#]
+// 添加根路由映射
+MyAPI.AddRoute("/", Hello);
+// 启动服务器
+MyAPI.StartServer();
+
+// 根路由映射的方法
+private async Task Hello(HttpListenerRequest request, HttpListenerResponse response)
+{
+    await response.WriteAsync("Hello PicoServer");
+}
+```
+
+```vb [VB.NET]
+' 添加根路由映射
+MyAPI.AddRoute("/", AddressOf Hello)
+' 启动服务器
+MyAPI.StartServer()
+
+' 根路由映射的方法
+Private Async Function Hello(request As HttpListenerRequest, response As HttpListenerResponse) As Task
+    Await response.WriteAsync("Hello PicoServer")
+End Function
+```
+
+:::
+
+> 💡 无需 IIS、无需 Kestrel、无需 Web 开发经验
+
+
 <div class="content-wrapper">
 
-## 🚀 概念升华：.NET 应用 + PicoServer = Web 化应用
+## .NET 应用 + PicoServer = Web 化应用
 
-PicoServer 是一款主打 **“集成至上、灵活嵌入”** 的胶水库。它无需依赖 IIS 或 Kestrel，直接嵌入任意 .NET 应用即可快速搭建 Web API、WebSocket 实时通信或轻量流媒体服务。
+PicoServer 是 .NET 生态的轻量级 Web 能力胶水库。零依赖，无需 IIS 或 Kestrel，涵盖 Web API、WebSocket 实时通信、Web 站点构建/静态文件托管等功能场景。零配置，一行代码实现 WebAPI ，不绑架业务。既能轻松扩展现有程序，也能基于它开发独立应用。
 
 | 🧱 你的原有程序 | 🔌 注入 PicoServer | 🌟 升级后的全新形态 |
 | :--- | :---: | :--- |
