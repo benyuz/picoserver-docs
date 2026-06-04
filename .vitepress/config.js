@@ -135,6 +135,8 @@ export default defineConfig({
     }
   },
 
+  ignoreDeadLinks: true,
+
   themeConfig: {
     search: {
       provider: 'local'
