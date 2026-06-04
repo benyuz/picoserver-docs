@@ -4,5 +4,8 @@
   "type": "module",
   "scripts": {
     "docs:build": "vitepress build"
+  },
+  "devDependencies": {
+    "vitepress": "^1.5.0"
   }
 }

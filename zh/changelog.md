@@ -1,3 +1,12 @@
+---
+prev:
+  text: 集成案例
+  link: /examples
+next:
+  text: 关于我们
+  link: /about
+---
+
 # 📌 PicoServer 更新日志
 PicoServer 作为 Web 能力胶水库，以轻量级 HTTP 服务器核心基础能力为支撑，提供开箱即用和灵活扩展的能力，兼容跨平台与 AOT 编译。
 推荐使用 PicoServer 最新版本，保障功能完整性,极简设计，没有破坏性更新，可放心升级
