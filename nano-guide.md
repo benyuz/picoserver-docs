@@ -7,6 +7,10 @@ next:
   link: /nano-benchmark
 ---
 
+<p align="center">
+  <img src="/nano-logo.png" alt="PicoServer.Nano" width="200">
+</p>
+
 # 🔌 PicoServer.Nano (面向 .NET nanoFramework)
 
 **PicoServer.Nano**（NuGet 包：`PicoServer.Nano`）是 PicoServer 在 **.NET nanoFramework** 生态系统上的轻量化移植版本。它是一个零依赖的"Web 胶水库"，专为资源受限的微控制器设计，特别针对 **ESP32** 进行了适配和优化。
