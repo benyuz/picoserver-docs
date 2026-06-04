@@ -6,6 +6,7 @@ export default defineConfig({
   base: '/',
 
   head: [
+    ['link', { rel: 'icon', href: '/logo.png' }],
     ['script', {}, `
       var _hmt = _hmt || [];
       (function() {
