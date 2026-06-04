@@ -67,7 +67,7 @@ End Function
 <div class="version-bar">
   <span class="badge-soft">📜 软著 2026SR0568305</span>
   <span class="badge-soft" style="background:#e8f5e9;border-color:#a5d6a7;">✅ 免费商用，支持信创</span>
-  <span class="badge-soft">📦 v1.7.1</span>
+  <img src="https://img.shields.io/nuget/v/PicoServer" alt="最新版本">
   <a href="https://www.nuget.org/packages/PicoServer" target="_blank">
     <img src="https://img.shields.io/nuget/dt/PicoServer" alt="下载量">
   </a>
