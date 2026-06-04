@@ -30,9 +30,9 @@ jobs:
         with:
           node-version: 20
       - name: 3. 安装 VitePress 依赖
-        run: npm install vitepress --save-dev
+        run: npm install
       - name: 4. 运行编译
-        run: npx vitepress build
+        run: npm run docs:build
       - name: 5. 上传产物
         uses: actions/upload-pages-artifact@v3
         with:
