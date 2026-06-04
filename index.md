@@ -64,21 +64,14 @@ End Function
 
 ---
 
-## 🏷️ 版本
-
-<span class="badge-soft">📜 国家计算机软件著作权 登记号：2026SR0568305</span>
-<span class="badge-soft" style="background:#e8f5e9;border-color:#a5d6a7;">✅ 免费商用，支持信创</span>
-
-| 版本 | 说明 |
-| :--- | :--- |
-| **PicoServer（免费版）** | 免费可商用，核心功能完备 |
-| **PicoServer.Pro（专业版）** | 商业授权，含国密加密、特性路由 SG 等增强能力 |
-
-![NuGet version](https://img.shields.io/nuget/v/PicoServer) ![NuGet downloads](https://img.shields.io/nuget/dt/PicoServer) &nbsp; PicoServer
-
-![NuGet version](https://img.shields.io/nuget/v/PicoServer.Nano) ![NuGet downloads](https://img.shields.io/nuget/dt/PicoServer.Nano) &nbsp; PicoServer.Nano
-
-> 完整对比请参阅 [版本对比](/pro)。
+<div class="version-bar">
+  <span class="badge-soft">📜 软著 2026SR0568305</span>
+  <span class="badge-soft" style="background:#e8f5e9;border-color:#a5d6a7;">✅ 免费商用，支持信创</span>
+  <span class="badge-soft">📦 v1.7.1</span>
+  <a href="https://www.nuget.org/packages/PicoServer" target="_blank">
+    <img src="https://img.shields.io/nuget/dt/PicoServer" alt="下载量">
+  </a>
+</div>
 
 
 ---
@@ -177,6 +170,15 @@ th, td {
 }
 th {
   background-color: var(--vp-c-bg-alt);
+}
+
+.version-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin: 24px 0;
 }
 
 .badge-soft {
