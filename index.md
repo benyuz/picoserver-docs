@@ -79,8 +79,6 @@ End Function
 
 ---
 
-<div class="content-wrapper">
-
 ## .NET 应用 + PicoServer = Web 化应用
 
 | 🧱 你的原有程序 | 🌟 + PicoServer |
@@ -135,46 +133,7 @@ End Function
 
 </div>
 
-</div>
-
 <style>
-.content-wrapper {
-  max-width: 1152px;
-  margin: 0 auto;
-  padding: 48px 24px;
-}
-.content-wrapper h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-top: 48px;
-  margin-bottom: 16px;
-  border-top: 1px solid var(--vp-c-divider);
-  padding-top: 24px;
-  letter-spacing: -0.02em;
-}
-.content-wrapper ul {
-  padding-left: 20px;
-  margin-bottom: 16px;
-}
-.content-wrapper li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
-table {
-  display: table;
-  width: 100%;
-  margin: 24px 0;
-  border-collapse: collapse;
-}
-th, td {
-  border: 1px solid var(--vp-c-divider);
-  padding: 12px;
-  text-align: left;
-}
-th {
-  background-color: var(--vp-c-bg-alt);
-}
-
 .version-bar {
   display: flex;
   flex-wrap: wrap;
