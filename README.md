@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/nuget/v/PicoServer" alt="NuGet version">
   <img src="https://img.shields.io/nuget/dt/PicoServer" alt="NuGet downloads">
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+
 </p>
 
 <h1 align="center">PicoServer</h1>
@@ -50,10 +50,10 @@ dotnet add package PicoServer
 
 ## 版本
 
-| 版本 | 许可证 | 说明 |
-|------|--------|------|
-| **免费版** | MIT，免费可商用 | 基础功能完备，免费可商用 |
-| **Pro 版** | 商业授权 | 含国密加密、Source Generator 特性路由等增强能力 |
+| 版本 | 说明 |
+|------|------|
+| **免费版** | 免费可商用，核心功能完备 |
+| **Pro 版** | 商业授权，含国密加密、特性路由等增强能力 |
 
 ## 联系
 

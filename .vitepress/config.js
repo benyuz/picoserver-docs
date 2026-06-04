@@ -145,7 +145,6 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/benyuz/picoserver-cn' }
     ],
     footer: {
-      message: 'Released under the MIT License.',
       copyright: 'Copyright © 2026-present juziyu'
     }
   }
