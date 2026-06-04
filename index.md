@@ -5,6 +5,9 @@ hero:
   name: "PicoServer"
   text: "轻量级 .NET Web 能力胶水库"
   tagline: "跨平台、高性能、零依赖、AOT、极简开发。"
+  image:
+    src: /logo.png
+    alt: PicoServer
   actions:
     - theme: brand
       text: 🚀 开始探索
