@@ -50,7 +50,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '📊 基准测试',
+            text: '📊 性能测试',
             link: '/benchmark'
           },
           {
@@ -58,7 +58,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'ESP32 快速上手', link: '/nano-guide' },
-              { text: '性能测试', link: '/nano-benchmark' }
+              { text: '性能表现', link: '/nano-benchmark' }
             ]
           },
           {
