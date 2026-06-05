@@ -142,7 +142,7 @@ export default defineConfig({
       provider: 'local'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/benyuz/picoserver-cn' }
+      { icon: 'github', link: 'https://github.com/benyuz/picoserver-docs' }
     ],
     footer: {
       copyright: 'Copyright © 2026-present juziyu'
