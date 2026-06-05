@@ -59,4 +59,5 @@ dotnet add package PicoServer
 
 - 官网：https://picoserver.cn
 - NuGet：https://www.nuget.org/packages/PicoServer
+- NuGet：https://www.nuget.org/packages/PicoServer.Nano
 - QQ 群：557215238
