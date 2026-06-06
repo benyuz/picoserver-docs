@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "PicoServer"
-  text: "轻量级 .NET Web 能力胶水库"
-  tagline: "跨平台、高性能、零依赖、AOT、极简开发。"
+  text: "为 .NET 程序加上 Web 能力"
+  tagline: "轻量、跨平台、零依赖、高性能、胶水特性、AOT、极简开发"
   image:
     src: /logo.png
     alt: PicoServer
@@ -15,9 +15,6 @@ hero:
     - theme: alt
       text: 📦 在 NuGet 下载
       link: https://www.nuget.org/packages/PicoServer
-    - theme: alt
-      text: ⭐ 版本差异对比
-      link: /pro
 
 features:
   - title: 📦 极致轻量 (仅几十 kb)
@@ -62,7 +59,7 @@ End Function
 
 :::
 
-> 💡 无需 IIS、无需 Kestrel、无需 Web 开发经验
+> 💡 无需 IIS、无需 Kestrel、无需 Web 开发经验、无需学习、一分钟上手
 
 
 ---
