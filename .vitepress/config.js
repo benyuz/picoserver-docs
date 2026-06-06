@@ -24,6 +24,13 @@ export default defineConfig({
       lang: 'zh-CN',
       link: '/',
       themeConfig: {
+        outline: { label: '目录' },
+        docFooter: { prev: '上一页', next: '下一页' },
+        darkModeSwitchLabel: '主题',
+        lightModeSwitchTitle: '切换到浅色模式',
+        darkModeSwitchTitle: '切换到深色模式',
+        sidebarMenuLabel: '菜单',
+        returnToTopLabel: '回到顶部',
         nav: [
           { text: '首页', link: '/' },
           { text: '快速入门', link: '/guide' },
