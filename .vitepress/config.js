@@ -24,6 +24,7 @@ export default defineConfig({
       lang: 'zh-CN',
       link: '/',
       themeConfig: {
+        siteTitle: 'PicoServer',
         lastUpdatedText: '最后更新于',
         editLink: {
           pattern: 'https://github.com/benyuz/picoserver-docs/edit/main/:path',
@@ -93,6 +94,7 @@ export default defineConfig({
       lang: 'en',
       link: '/en/',
       themeConfig: {
+        siteTitle: 'PicoServer',
         lastUpdatedText: 'Last updated',
         editLink: {
           pattern: 'https://github.com/benyuz/picoserver-docs/edit/main/:path',
