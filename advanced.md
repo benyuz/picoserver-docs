@@ -276,7 +276,7 @@ function startSSE() {
 }
 ```
 
-> 🛠️ **PicoServer SSE 在线测试工具** https://picoserver.cn/tools/ssetest.html
+> 🛠️ **PicoServer SSE 在线测试工具** [/tools/ssetest.html](/tools/ssetest.html)
 
 ### 长连接低内存 Chunk 块推送
 
