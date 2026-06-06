@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: "PicoServer 官方文档",
-  description: "高性能轻量级 .NET Web 能力胶水库",
+  description: "轻量级零依赖 .NET Web 能力胶水库",
   base: '/',
 
   head: [
@@ -24,7 +24,7 @@ export default defineConfig({
       lang: 'zh-CN',
       link: '/',
       themeConfig: {
-        outline: { label: '目录' },
+        outline: { label: '本页目录' },
         docFooter: { prev: '上一页', next: '下一页' },
         darkModeSwitchLabel: '主题',
         lightModeSwitchTitle: '切换到浅色模式',
@@ -34,8 +34,8 @@ export default defineConfig({
         nav: [
           { text: '首页', link: '/' },
           { text: '快速入门', link: '/guide' },
-          { text: '使用示例', link: '/basic' },
           { text: '集成案例', link: '/examples' },
+          { text: '更新日志', link: '/changelog' },
           { text: '关于我们', link: '/about' }
         ],
         sidebar: [
@@ -44,7 +44,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: '项目简介', link: '/' },
-              { text: '快速入门（含安装）', link: '/guide' }
+              { text: '快速入门', link: '/guide' }
             ]
           },
           {
@@ -91,8 +91,8 @@ export default defineConfig({
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'Quick Start', link: '/en/guide' },
-          { text: 'Usage', link: '/en/basic' },
           { text: 'Examples', link: '/en/examples' },
+          { text: 'Changelog', link: '/en/changelog' },
           { text: 'About', link: '/en/about' }
         ],
         sidebar: [
