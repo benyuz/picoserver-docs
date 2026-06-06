@@ -23,8 +23,16 @@ features:
     details: 全异步非阻塞架构，完全摒弃运行时反射，原生支持 Native AOT 编译，毫秒级启动。
   - title: 🌍 完美兼容 (.NET Standard 2.0)
     details: 完美支持 .NET Framework 4.6.1+、Core、.NET 5/6/8+，跨平台支持 Linux、Windows、macOS。
-
 ---
+
+<div class="version-bar">
+  <span class="badge-soft">📜 软著 2026SR0568305</span>
+  <span class="badge-soft" style="background:#e8f5e9;border-color:#a5d6a7;">✅ 免费商用，支持信创</span>
+  <img src="https://img.shields.io/nuget/v/PicoServer" alt="最新版本">
+  <a href="https://www.nuget.org/packages/PicoServer" target="_blank">
+    <img src="https://img.shields.io/nuget/dt/PicoServer" alt="下载量">
+  </a>
+</div>
 
 ## 🧩 一行代码添加 WebAPI
 
@@ -61,21 +69,6 @@ End Function
 
 > 💡 无需 IIS、无需 Kestrel、无需 Web 开发经验、无需学习、一分钟上手
 
-
----
-
-<div class="version-bar">
-  <span class="badge-soft">📜 软著 2026SR0568305</span>
-  <span class="badge-soft" style="background:#e8f5e9;border-color:#a5d6a7;">✅ 免费商用，支持信创</span>
-  <img src="https://img.shields.io/nuget/v/PicoServer" alt="最新版本">
-  <a href="https://www.nuget.org/packages/PicoServer" target="_blank">
-    <img src="https://img.shields.io/nuget/dt/PicoServer" alt="下载量">
-  </a>
-</div>
-
-
----
-
 ## .NET 应用 + PicoServer = Web 化应用
 
 | 🧱 你的原有程序 | 🌟 + PicoServer |
@@ -86,7 +79,6 @@ End Function
 | **边缘设备端** | ＝ 具备 Web 能力的边缘节点 |
 | **你的程序** | ＝ ？（留给你的无限可能） |
 
----
 
 ## 🎯 典型场景
 
