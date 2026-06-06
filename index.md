@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "PicoServer"
-  text: "为你的 .NET 程序加上 Web 能力"
+  text: "为你的 .NET 程序添加 Web 能力"
   tagline: "轻量、跨平台、零依赖、高性能、胶水特性、AOT、极简开发"
   image:
     src: /logo.png
