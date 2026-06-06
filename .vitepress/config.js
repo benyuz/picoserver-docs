@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: "PicoServer 官方文档",
-  description: "轻量级零依赖 .NET Web 能力胶水库",
+  description: "轻量级零依赖 .NET Web 能力胶水库,跨平台,高性能,支持 AOT,极简开发",
   base: '/',
-
+  lastUpdated: true, 
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
     ['script', {}, `
@@ -24,6 +24,11 @@ export default defineConfig({
       lang: 'zh-CN',
       link: '/',
       themeConfig: {
+        lastUpdatedText: '最后更新于',
+        editLink: {
+          pattern: 'https://github.com/benyuz/picoserver-docs/edit/main/:path',
+          text: '在 GitHub 上编辑此页'
+        },
         outline: { label: '本页目录' },
         docFooter: { prev: '上一页', next: '下一页' },
         darkModeSwitchLabel: '主题',
@@ -88,6 +93,11 @@ export default defineConfig({
       lang: 'en',
       link: '/en/',
       themeConfig: {
+        lastUpdatedText: 'Last updated',
+        editLink: {
+          pattern: 'https://github.com/benyuz/picoserver-docs/edit/main/:path',
+          text: 'Edit this page on GitHub'
+        },
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'Quick Start', link: '/en/guide' },
@@ -101,7 +111,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'Introduction', link: '/en/' },
-              { text: 'Quick Start (with Install)', link: '/en/guide' }
+              { text: 'Quick Start', link: '/en/guide' }
             ]
           },
           {
@@ -145,6 +155,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
 
   themeConfig: {
+    logo: '/logo.png',
     search: {
       provider: 'local'
     },
