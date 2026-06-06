@@ -272,7 +272,41 @@ MyAPI.AddCors(); //启用跨域
 
 ---
 
-## 5. Cookie 管理
+## 5. 语义化路由与服务控制
+
+### 语义化路由（1.7+）
+
+::: code-group
+
+```csharp [C#]
+MyAPI.MapGet("/api/user", GetUser);     // GET 请求
+MyAPI.MapPost("/api/user", CreateUser); // POST 请求
+MyAPI.MapPut("/api/user/{id}", UpdateUser);  // PUT 请求
+MyAPI.MapDelete("/api/user/{id}", DeleteUser); // DELETE 请求
+```
+
+```vb [VB.NET]
+MyAPI.MapGet("/api/user", AddressOf GetUser)
+MyAPI.MapPost("/api/user", AddressOf CreateUser)
+MyAPI.MapPut("/api/user/{id}", AddressOf UpdateUser)
+MyAPI.MapDelete("/api/user/{id}", AddressOf DeleteUser)
+```
+
+:::
+
+### 服务控制方法
+
+```csharp
+MyAPI.StartServer(); //开启服务，默认端口 8090
+MyAPI.StartServer(8891); //开启服务，指定端口
+MyAPI.StartServer("127.0.0.1"); //开启服务，限定为本机可访问（Pro版）
+MyAPI.StartServer("127.0.0.1", 8891); //开启服务，限定本机访问并指定端口（Pro版）
+MyAPI.StopServer();  //停止服务
+```
+
+---
+
+## 6. Cookie 管理
 
 内置防空指针引用的安全读写机制。
 

@@ -190,9 +190,22 @@ response.SendStreamAsync(fs, GetContentType(".mp4"), true); //无缓存、Chunke
 
 ### SSE (Server-Sent Events)
 
+完整服务端实现：
+
 ::: code-group
 
 ```csharp [C#]
+private readonly WebAPIServer MyAPI = new WebAPIServer();
+
+static void Main()
+{
+    MyAPI.AddRoute("/iot/notify", Notify, "GET"); // SSE推送路由
+    MyAPI.StartServer(8090);
+    Console.WriteLine("SSE推送服务已启动：http://127.0.0.1:8090/iot/notify");
+    Console.ReadKey();
+    MyAPI.StopServer();
+}
+
 public static async Task Notify(HttpListenerRequest request, HttpListenerResponse response)
 {
     response.ContentType = "text/event-stream";
@@ -218,6 +231,16 @@ public static async Task Notify(HttpListenerRequest request, HttpListenerRespons
 ```
 
 ```vb [VB.NET]
+Private ReadOnly MyAPI As New WebAPIServer()
+
+Sub Main()
+    MyAPI.AddRoute("/iot/notify", AddressOf Notify, "GET")
+    MyAPI.StartServer(8090)
+    Console.WriteLine("SSE推送服务已启动：http://127.0.0.1:8090/iot/notify")
+    Console.ReadKey()
+    MyAPI.StopServer()
+End Sub
+
 Public Async Function Notify(request As HttpListenerRequest, response As HttpListenerResponse) As Task
     response.ContentType = "text/event-stream"
     response.Headers.Add("Cache-Control", "no-cache")
@@ -298,7 +321,7 @@ End Function
 
 ## 4. 全双工 WebSocket 双向通信
 
-> WebSocket 服务端可以和 WebAPI 同时存在，且共用端口，共用地址。
+> WebSocket 服务端可以和 WebAPI 同时存在，且共用端口，Websocket 不受路由地址影响，一般自定义一个`ws`作为标识。
 >
 > **WebSocket 在线测试工具 https://wstool.js.org/**
 
@@ -640,14 +663,37 @@ request.GetToken(); //获取请求头中的 token 值
 MyAPI.Jwt.DecodePayload(token); //解码 JWT 负载
 MyAPI.Jwt.GenerateToken(payload); //创建 JWT token
 
-MyAPI.GetTimeStamp10(3600); // 获取10位时间戳
-MyAPI.GetTimeStamp13(); // 获取13位时间戳
+MyAPI.GetTimeStamp10(3600); // 获取10位时间戳，追加3600秒（1小时）
+MyAPI.GetTimeStamp10();     // 获取当前10位时间戳
+MyAPI.GetTimeStamp13();     // 获取13位时间戳（毫秒）
+MyAPI.GetTimeStamp13(500);  // 获取13位时间戳，追加500毫秒
+```
 
-// 加密工具（PicoServer.Crypto）
-string signature = HS256.ComputeHmac256(data, key); // HMAC-SHA256 签名
-byte[] hash = SM3.ComputeHash(data); // SM3 哈希计算
-string hmacSm3 = SM3.ComputeHmacSM3(data, key); // HMAC-SM3 签名
-string passwordHash = SM3.HashPassword(password, salt, iterations); // SM3 密码哈希
-string encoded = Base64Url.Encode(data); // Base64Url 编码
+---
+
+## 6. 加密工具（PicoServer.Crypto）
+
+> Pro 版提供的加密工具集，支持国密 SM3 算法。
+
+### 哈希与签名
+
+```csharp
+// HMAC-SHA256 签名
+string signature = HS256.ComputeHmac256(data, key);
+
+// SM3 哈希计算（国密标准）
+byte[] hash = SM3.ComputeHash(data);
+
+// HMAC-SM3 签名（国密标准）
+string hmacSm3 = SM3.ComputeHmacSM3(data, key);
+
+// SM3 密码哈希（带盐值和迭代次数）
+string passwordHash = SM3.HashPassword(password, salt, iterations);
+```
+
+### Base64Url 编解码
+
+```csharp
+string encoded = Base64Url.Encode(data);  // Base64Url 编码
 string decoded = Base64Url.Decode(encoded); // Base64Url 解码
 ```
