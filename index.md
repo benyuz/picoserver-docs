@@ -10,19 +10,19 @@ hero:
     alt: PicoServer
   actions:
     - theme: brand
-      text: 🚀 开始探索
+      text: 开始探索
       link: /guide
     - theme: alt
-      text: 📦 在 NuGet 下载
+      text: NuGet Package
       link: https://www.nuget.org/packages/PicoServer
 
 features:
   - title: 📦 极致轻量 (仅几十 kb)
     details: 单 DLL 仅几十 kb，无任何第三方依赖。开箱即用零配置，老旧项目无需修改原有业务代码。
-  - title: ⚡ 编译期决议 (Native AOT)
+  - title: ⚡ 原生 AOT 编译 (Native AOT)
     details: 全异步非阻塞架构，完全摒弃运行时反射，原生支持 Native AOT 编译，毫秒级启动。
   - title: 🌍 完美兼容 (.NET Standard 2.0)
-    details: 完美支持 .NET Framework 4.6.1+、Core、.NET 5/6/8+，跨平台支持 Linux、Windows、macOS。
+    details: 完美支持 .NET Framework 4.6.1+、Core、.NET 5/6/8/10+，跨平台支持 Linux、Windows、macOS。
 ---
 
 <div class="version-bar">
@@ -36,7 +36,7 @@ features:
 
 ## 🧩 一行代码添加 WebAPI
 
-❤️ 像调用方法一样自然
+❤️ 像调用方法一样自然，无需学习、无需配置、零依赖。仅需一行代码即可添加 Web API。
 
 ::: code-group
 
@@ -67,55 +67,80 @@ End Function
 
 :::
 
-> 💡 无需 IIS、无需 Kestrel、无需 Web 开发经验、无需学习、一分钟上手
 
-## .NET 应用 + PicoServer = Web 化应用
+## 🔄 .NET 应用 + PicoServer = Web 化应用
 
-| 🧱 你的原有程序 | 🌟 + PicoServer |
-| :--- | :--- |
-| **工控上位机** | ＝ 可远程管理的 Web 化上位机 |
-| **桌面应用 (WinForms/WPF)** | ＝ 带 API 接口的桌面服务 |
-| **控制台程序** | ＝ 轻量独立 Web 服务 |
-| **边缘设备端** | ＝ 具备 Web 能力的边缘节点 |
-| **你的程序** | ＝ ？（留给你的无限可能） |
+<div class="card-grid">
+  <div class="card">
+    <div class="card-icon">🏭</div>
+    <h3>工控上位机</h3>
+    <p>可远程管理的 Web 化上位机</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🖥️</div>
+    <h3>桌面应用 (WinForms/WPF)</h3>
+    <p>带 API 接口的桌面服务</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">📱</div>
+    <h3>跨平台项目 (MAUI/Avalonia)</h3>
+    <p>带 API 接口的跨平台应用</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">📟</div>
+    <h3>控制台程序</h3>
+    <p>轻量跨平台独立 Web 服务</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🌐</div>
+    <h3>边缘设备端</h3>
+    <p>具备 Web 能力的边缘节点</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">✨</div>
+    <h3>你的程序</h3>
+    <p>留给你的无限可能</p>
+  </div>
+</div>
 
+> 💡 PicoServer 无需 IIS、无需 Kestrel、无需 Web 开发经验，一分钟上手
 
 ## 🎯 典型场景
 
-<div class="scene-grid">
+<div class="card-grid">
 
-<div class="scene-card">
-<div class="scene-icon">🌐</div>
+<div class="card">
+<div class="card-icon">🌐</div>
 <h3>极简 Web API</h3>
 <p>不想折腾复杂框架，只需几行代码快速实现接口服务。开箱即用，内置 Token / JWT 认证。</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">🔄</div>
+<div class="card">
+<div class="card-icon">🔄</div>
 <h3>老旧项目赋能</h3>
 <p>给旧 .NET Framework 项目快速增加 Web 能力，无需重构，不改原有业务代码。</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">🖥️</div>
+<div class="card">
+<div class="card-icon">🖥️</div>
 <h3>桌面应用 Web 化</h3>
 <p>WinForm / WPF / MAUI / Avalonia 增加远程管理接口，单 DLL 嵌入，AOT 支持。</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">🏭</div>
+<div class="card">
+<div class="card-icon">🏭</div>
 <h3>边缘网关 / 工控上位机</h3>
 <p>对体积、CPU、内存占用严苛的工业网关、边缘计算场景，极低资源消耗。</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">🌍</div>
+<div class="card">
+<div class="card-icon">🌍</div>
 <h3>跨平台项目</h3>
 <p>Windows、macOS、Linux，胶水特性可与任意库配合使用，一套代码处处运行。</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">📊</div>
+<div class="card">
+<div class="card-icon">📊</div>
 <h3>轻量 Web 应用</h3>
 <p>Web 管理后台、SPA 应用、中小型网站，无需 ASP.NET Core，不依赖 IIS。</p>
 </div>
@@ -142,32 +167,40 @@ End Function
   margin: 8px 0;
 }
 
-.scene-grid {
+/* 统一使用 card-grid 和 card */
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
   margin: 24px 0;
 }
-.scene-card {
+
+.card {
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   padding: 24px;
   transition: all 0.3s ease;
+  background: var(--vp-c-bg-soft);
 }
-.scene-card:hover {
+
+.card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px var(--vp-c-shadow);
+  border-color: var(--vp-c-brand);
 }
-.scene-icon {
+
+.card-icon {
   font-size: 28px;
   margin-bottom: 12px;
 }
-.scene-card h3 {
-  font-size: 16px;
+
+.card h3 {
+  font-size: 18px;
   font-weight: 600;
   margin: 0 0 8px 0;
 }
-.scene-card p {
+
+.card p {
   font-size: 14px;
   line-height: 1.6;
   color: var(--vp-c-text-2);

@@ -4,60 +4,13 @@ prev:
   link: /changelog
 ---
 
-# 👥 关于我们 / 项目简介
+## 👥 关于我们
 
-PicoServer 是一个面向 .NET 生态的轻量级 Web 能力水库，为控制台程序、桌面应用（WinForms / WPF）、Windows 服务等传统 .NET 程序提供零依赖、零反射、极简配置的 Web API、WebSocket、静态文件托管能力。
+PicoServer 诞生于2024年，最初是为我自己项目增加 Web API 而写的内部工具，后逐步打磨成独立库。它将保持长期维护，稳定运行，开发策略保守：**轻量，AOT 支持**。
 
----
+它是 .NET 平台的补位者，为控制台、WinForm、WPF、MAUI、Avalonia、VSTO 等任意 .NET 程序，提供零依赖、极简配置的 Web API、WebSocket、静态文件托管能力。PicoServer 不是 ASP.NET 的替代品，只做一件事——给 .NET 程序加个 Web 能力，顺手、开箱即用。感谢微软 MVP [Alex Chow](https://docs.microsoft.com/zh-cn/previous-versions/msdn10/cc668330(v=MSDN.10)?WT.mc_id=DT-MVP-5005078) 从早期参与贡献。
 
-## ✨ 项目定位
 
-| 维度 | 说明 |
-|------|------|
-| **目标用户** | 需要给现有 .NET 程序"顺便加个接口"的开发者 |
-| **核心价值** | 不用 IIS、不用 Kestrel、不用学习新框架，几行代码搞定 Web 化 |
-| **设计哲学** | 代码即文档、最小依赖、最大透明 |
-| **技术栈** | 纯 .NET Standard 2.0，无第三方依赖 |
+## 🤝 联系我们
 
-PicoServer 不是另一个 ASP.NET 框架的替代品，而是**让不擅长 Web 开发的 .NET 开发者也能快速构建 HTTP / WebSocket 服务**。
-
----
-
-## 📦 版本
-
-| 版本 | 目标场景 | 核心特性 | 许可证 |
-|------|---------|---------|--------|
-| **免费版** | 免费可商用，不限个人及企业 | WebAPI、WebSocket、SSE、静态文件、CORS、中间件、Token/JWT 鉴权 | — |
-| **Pro 版** | 商业项目 / 国密合规 / AOT | 在免费版基础上增加：SM3 国密、Source Generator 特性路由、本机访问限定、指定端口启动 | 商业授权 |
-
-详见 [版本对比](/pro)
-
----
-
-## 📊 运行时与平台支持
-
-| 运行时 | 支持版本 |
-|--------|---------|
-| .NET Framework | 4.6.1 及以上 |
-| .NET Core | 2.0 及以上 |
-| .NET 5 / 6 / 7 / 8 / 9 | ✅ 完全支持 |
-
-| 操作系统 | 支持情况 |
-|---------|---------|
-| Windows 7 / 8 / 10 / 11 | ✅ 完全支持 |
-| Windows Server 2008+ | ✅ 完全支持 |
-| Linux (Ubuntu, CentOS, Debian, Alpine) | ✅ 完全支持 |
-| macOS | ✅ 完全支持 |
-
----
-
-## 🤝 参与方式
-
-发现 Bug、有建议、或希望贡献代码？欢迎通过以下渠道参与：
-
-- **📦 NuGet**：搜索 `PicoServer` 安装使用，别忘了给一个 ⭐
-- **🐛 Bug 反馈**：在 GitHub Issues 描述复现步骤和环境信息
-- **💡 功能建议**：欢迎分享你的使用场景和需求
-- **📝 文档改进**：发现文档有误或可改进之处，直接修改提交
-
-> 💡 本项目遵循「代码即文档」的设计原则 —— 每一个集成案例、每一段示例代码，都是对能力的最佳诠释。
+> Bug 反馈、功能建议、文档改进或 Pro 版授权，请联系 GitHub [benyuz](https://github.com/benyuz) 或 QQ：1035675066 邮箱：picoserver@qq.com。

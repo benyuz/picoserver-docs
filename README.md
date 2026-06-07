@@ -21,12 +21,12 @@ PicoServer 是一款基于 .NET Standard 2.0 构建的轻量级 Web 能力胶水
 
 - 📦 **极致轻量** — 单 DLL 仅几十 KB，零依赖，开箱即用
 - ⚡ **编译期决议** — 全异步非阻塞，原生支持 Native AOT，毫秒级启动
-- 🌍 **完美兼容** — .NET Framework 4.6.1+ 至 .NET 10，跨平台
+- 🌍 **完美兼容** — .NET Framework 4.6.1+ 至 .NET 10+，跨平台支持 Linux、Windows、macOS
 - 🔌 **一行代码 WebAPI** — `AddRoute` + `StartServer`，像调用方法一样自然
 - 🔄 **WebSocket** — 全双工通信，心跳检测，广播推送，万连接实测
 - 🔐 **Token / JWT 鉴权** — 内置简单 Token 和 JWT 鉴权，支持国密 SM3
-- 📁 **静态文件托管** — 缓存策略、MIME 识别、跨域配置、SPA 支持
-- 🧩 **自定义中间件** — `AddMiddleware` 完全开放，按需注册
+- 📁 **静态文件托管** — 缓存策略、MIME 识别、跨域配置、SPA 支持，原生防目录遍历保护
+- 🧩 **自定义中间件** — `AddMiddleware` 完全开放，顺序执行，按需注册
 
 ## 快速开始
 
@@ -42,7 +42,7 @@ app.StartServer();
 
 ## 详细文档
 
-完整的使用指南、API 示例、性能测试报告请访问：https://picoserver.cn
+完整的使用指南、API 示例、性能测试报告请访问：[PicoServer 官方文档](https://picoserver.cn)
 
 ## 版本
 
@@ -60,8 +60,8 @@ app.StartServer();
 
 ## 联系
 
-- 官网：https://picoserver.cn
+- 官网：[https://picoserver.cn](https://picoserver.cn)
 - Q Q: 1305675066
-- 邮箱：PicoServer@qq.com
-- NuGet：https://www.nuget.org/packages/PicoServer
-- NuGet：https://www.nuget.org/packages/PicoServer.Nano
+- 邮箱：[PicoServer@qq.com](mailto:PicoServer@qq.com)
+- NuGet：[https://www.nuget.org/packages/PicoServer](https://www.nuget.org/packages/PicoServer)
+- NuGet：[https://www.nuget.org/packages/PicoServer.Nano](https://www.nuget.org/packages/PicoServer.Nano)

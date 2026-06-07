@@ -154,6 +154,6 @@ server.AddRoute("/hello", (req, res) => res.Write("Hello"));
 
 ## 资源链接
 
-- NuGet：`PicoServer.Nano` https://www.nuget.org/packages/PicoServer.Nano
+- NuGet：`PicoServer.Nano` [https://www.nuget.org/packages/PicoServer.Nano](https://www.nuget.org/packages/PicoServer.Nano)
 - 官网：https://picoserver.cn
 - nanoFramework 官网：https://www.nanoframework.net

@@ -55,7 +55,7 @@ export default defineConfig({
           },
           {
             text: '📚 使用示例',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: '基础能力', link: '/basic' },
               { text: '高级能力（含鉴权）', link: '/advanced' },
@@ -63,12 +63,16 @@ export default defineConfig({
             ]
           },
           {
+            text: '📦 版本说明',
+            link: '/pro'
+          },
+          {
             text: '📊 性能测试',
             link: '/benchmark'
           },
           {
             text: '📟 PicoServer.Nano',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'ESP32 快速上手', link: '/nano-guide' },
               { text: '性能表现', link: '/nano-benchmark' }
@@ -110,7 +114,7 @@ export default defineConfig({
         sidebar: [
           {
             text: '📖 Getting Started',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Introduction', link: '/en/' },
               { text: 'Quick Start', link: '/en/guide' }
@@ -118,12 +122,16 @@ export default defineConfig({
           },
           {
             text: '📚 Usage Examples',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Basic Features', link: '/en/basic' },
               { text: 'Advanced Features (Auth)', link: '/en/advanced' },
               { text: 'Custom Middleware', link: '/en/middleware' }
             ]
+          },
+          {
+            text: '📦 Version Information',
+            link: '/en/pro'
           },
           {
             text: '📊 Benchmark',

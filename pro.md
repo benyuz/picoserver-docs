@@ -8,61 +8,77 @@ next:
 ---
 
 # 🏷️ 版本对比
-**免费版** vs **Pro版**。PicoServer 采用双版本发行策略。**Pro 版本 = 免费版 + 企业级特性和更多优化**，Pro 版本 API 完全兼容免费版，可无缝升级。
 
+PicoServer 采用双版本发行策略。**Pro 版 = 免费版 + 企业级特性**，API 完全兼容，可无缝升级。
 
-## 📌 版本标识速览
+***
 
-| 维度 | PicoServer（免费版） | PicoServer.Pro（专业版） |
-| :--- | :--- | :--- |
+## 📌 版本标识
+
+| 维度        | 免费版               | Pro 版                 |
+| :-------- | :---------------- | :-------------------- |
 | **版本号格式** | 数字版本号（如 `v1.2.3`） | 日期版本号（如 `v2026.4.25`） |
-| **许可证** | 免费可商用 | 商业授权 |
-| **发行渠道** | NuGet 公开包 | 授权后分发 |
-| **技术支持** | GitHub Issues，社区互助 | 优先响应 + 定制支持 |
-| **包含免费版全部功能** | ✅ | ✅ |
+| **许可证**   | 免费可商用             | 商业授权                  |
+| **发行渠道**  | NuGet 公开包         | 授权后分发                 |
+| **技术支持**  | GitHub Issues     | 优先响应 + 定制支持           |
 
+***
 
-## 🔍 功能特性对比
+## 📊 运行时与平台支持
+
+| 运行时                         | 操作系统                      | 支持情况 |
+| --------------------------- | ------------------------- | ---- |
+| .NET Framework 4.6.1+       | Windows 7+ / Server 2008+ | ✅    |
+| .NET Core 2.0+              | Windows / Linux / macOS   | ✅    |
+| .NET 5 / 6 / 7 / 8 / 9 / 10 | Windows / Linux / macOS   | ✅    |
+
+***
+
+## 🔍 功能对比
 
 ### 核心能力（两版一致）
 
-| 特性 | 免费版 | Pro版 |
-| :--- | :---: | :---: |
-| 一行代码启动 Web 服务器 | ✅ | ✅ |
-| 精准路由 / 星号通配 / RESTful 路由 | ✅ | ✅ |
-| WebSocket 实时通信 | ✅ | ✅ |
-| SSE 服务端事件推送 | ✅ | ✅ |
-| 静态文件托管（目录浏览 / Range / gzip） | ✅ | ✅ |
-| 大文件异步上传下载（流式非阻塞） | ✅ | ✅ |
-| 中间件管道（鉴权 / CORS / 自定义） | ✅ | ✅ |
-| 特性路由 | ✅ | ✅ |
-| 简单 Token 鉴权 | ✅ | ✅ |
-| 基础 JWT 鉴权（HMAC-SHA） | ✅ | ✅ |
-| Native AOT 编译（核心库） | ✅ | ✅ |
-| .NET Standard 2.0 跨平台兼容 | ✅ | ✅ |
+| 特性                    | 免费版 | Pro 版 |
+| :-------------------- | :-: | :---: |
+| 一行代码启动 Web 服务器        |  ✅  |   ✅   |
+| 精准路由 / 通配路由 / RESTful |  ✅  |   ✅   |
+| WebSocket / SSE       |  ✅  |   ✅   |
+| 静态文件托管                |  ✅  |   ✅   |
+| 大文件异步上传下载             |  ✅  |   ✅   |
+| 中间件管道（CORS / 鉴权）      |  ✅  |   ✅   |
+| Token / JWT 鉴权        |  ✅  |   ✅   |
+| Native AOT 支持         |  ✅  |   ✅   |
+| 特性路由                  |  ✅  |   ✅   |
 
-> 免费版特性路由需要安装扩展包 [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions)
->
-> Pro 版内置特性路由，且完美支持 AOT
+> 免费版通过安装扩展包 [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) 使用特性路由。Pro 版内置特性路由，且支持 AOT 编译。
 
-### 增强能力（仅 Pro 版）
+### Pro 版功能
 
-| 特性 | 免费版 | Pro版 | 说明 |
-| :--- | :---: | :---: | :--- |
-| **国密 SM3 哈希** | ❌ | ✅ | `PicoServer.Crypto.SM3` 命名空间 |
-| **JWT HMAC-SM3 国密签名** | ❌ | ✅ | `AddJwtTokenVerify(secret, HashType.SM3)` |
-| **SM3 密码哈希（带迭代拉伸）** | ❌ | ✅ | `SM3.HashPassword(password, salt, iterations)` |
-| **限定IP访问** | ❌ | ✅ | `MyAPI.StartServer("127.0.0.1", 8891)` 端口可选 |
-| **请求上下文属性字典** | ❌ | ✅ | `request.Items()` 中间件传值 |
+| 特性              | 说明                                             |
+| :-------------- | :--------------------------------------------- |
+| 国密 SM3 哈希       | `PicoServer.Crypto.SM3`                        |
+| JWT HMAC-SM3 签名 | `AddJwtTokenVerify(secret, HashType.SM3)`      |
+| SM3 密码哈希（拉伸）    | `SM3.HashPassword(password, salt, iterations)` |
+| 限定 IP 访问        | `MyAPI.StartServer("127.0.0.1", 8891)`         |
+| 请求上下文 Items     | `request.Items()` 中间件传值                        |
+| 更多企业级特性 | - |
 
+
+***
 
 ## ⚖️ 选择建议
-日常开发内部工具、轻量化WebAPI且无国密相关需求时选用免费版即可；若项目为商用需要出具书面授权与开票、存在SM3国密哈希签名合规需求，特性路由 + AOT、IP本机访问限制等企业级能力，则推荐使用Pro版本。
 
+| 场景                 | 推荐        |
+| :----------------- | :-------- |
+| 内部工具、个人项目、学习试用     | **免费版**   |
+| 商用需书面授权、国密合规、企业级特性 | **Pro 版** |
+
+***
 
 ## 📥 获取与联系
 
-* **免费版**：直接在 [NuGet](https://www.nuget.org/packages/PicoServer) 搜索 `PicoServer` 安装
-* **Pro版授权**：在线购买，联系 QQ 1035675066 邮箱 picoserver@qq.com 获取商业合作和支持。
+- **免费版**：[NuGet](https://www.nuget.org/packages/PicoServer) 搜索 `PicoServer`
+- **Pro 版授权**：QQ `1035675066` / 邮箱 `picoserver@qq.com`
 
-> 关于「代码即文档」：本页所有功能点均在 [快速入门](/guide)、[高级能力](/advanced) 中配有可直接运行的 C# / VB.NET 示例，无单独 API 参考文档。
+> 💡 文档 [快速入门](/guide)、[基础能力](/basic)中配有可运行的代码示例。
+

@@ -44,7 +44,7 @@ private async Task DownloadFile(HttpListenerRequest request, HttpListenerRespons
 // 文件上传（带进度回调）
 private async Task UploadFile(HttpListenerRequest request, HttpListenerResponse response)
 {
-    string fname = request.Headers["filename"]; //从请求头中获取文件名，中文文件名建议用 BASE64 编码或者 URL 编码
+    string fname = request.Headers["filename"]; // 从请求头中获取文件名
     bool isSuccess = await request.SaveFileAsync(fname, (current, total) =>
     {
         Console.WriteLine($"上传进度：{ current * 100 / total}%");
@@ -102,17 +102,16 @@ End Function
 **相关方法**
 
 ```csharp
-//发送文件，支持断点下载
-response.SendFileAsync(); //流式发送，大文件低内存消耗，根据扩展名自动添加文件类型
-response.SendFileAsync(filePath); //支持文档/视频等直接预览
-response.SendFileAsync(filePath, true); //强制下载
-response.SendFileAsync(Mp4Path, false, request); //播放视频，支持拖动播放
-//接受文件上传，支持断点续传
-request.SaveFileAsync(); //流式保存，大文件低内存消耗
-request.SaveFileAsync(filePath); //保存文件到指定路径（相对/绝对皆可），需要包含文件名
-request.SaveFileAsync(filePath, onProgress); //保存文件到指定路径，支持回调进度
+// 发送文件，支持断点下载
+response.SendFileAsync(); // 流式发送，大文件低内存消耗
+response.SendFileAsync(filePath); // 支持文档/视频等直接预览
+response.SendFileAsync(filePath, true); // 强制下载
+response.SendFileAsync(Mp4Path, false, request); // 播放视频，支持拖动播放
 
-request.Headers["filename"]; //举例：从请求头中获取文件名，生产中应进行非空判断
+// 接受文件上传，支持断点续传
+request.SaveFileAsync(); // 流式保存，大文件低内存消耗
+request.SaveFileAsync(filePath); // 保存文件到指定路径
+request.SaveFileAsync(filePath, onProgress); // 支持回调进度
 ```
 
 ---
@@ -321,7 +320,7 @@ End Function
 
 ## 4. 全双工 WebSocket 双向通信
 
-> WebSocket 服务端可以和 WebAPI 同时存在，且共用端口，Websocket 不受路由地址影响，一般自定义一个`ws`作为标识。
+> WebSocket 服务端可以和 WebAPI 同时存在，且共用端口，WebSocket 不受路由地址影响，一般自定义一个 `ws` 作为标识。
 >
 > **WebSocket 在线测试工具 https://wstool.js.org/**
 
@@ -392,16 +391,16 @@ End Function
 **服务端相关方法**
 
 ```csharp
-MyAPI.enableWebSocket = true; //启用WebSocket支持
+MyAPI.enableWebSocket = true; // 启用 WebSocket 支持
 MyAPI.WsOnConnectionChanged; // 事件：客户端连接状态变化
-MyAPI.WsOnMessage; //事件：收到客户端消息
-MyAPI.WsBroadcastAsync(); //对所有在线客户端广播消息
-MyAPI.WsGetOnlineClients; //获取在线客户端列表
-MyAPI.WsSendToClientAsync(client, message); //给指定客户端发送消息
-MyAPI.WsEnableHeartbeat = true; //启用心跳检测，默认false
-MyAPI.WsHeartbeatTimeout = 60; //设置心跳时间，默认30秒
-MyAPI.WsMaxConnections = 200; //设置最大连接数，默认100
-MyAPI.WsPingString = "hi"; //设置 ping 消息，默认"ping"
+MyAPI.WsOnMessage; // 事件：收到客户端消息
+MyAPI.WsBroadcastAsync(); // 对所有在线客户端广播消息
+MyAPI.WsGetOnlineClients; // 获取在线客户端列表
+MyAPI.WsSendToClientAsync(client, message); // 给指定客户端发送消息
+MyAPI.WsEnableHeartbeat = true; // 启用心跳检测，默认 false
+MyAPI.WsHeartbeatTimeout = 60; // 设置心跳超时，默认 30 秒
+MyAPI.WsMaxConnections = 200; // 设置最大连接数，默认 100
+MyAPI.WsPingString = "hi"; // 设置 ping 消息，默认 "ping"
 ```
 
 ### 客户端
@@ -654,7 +653,7 @@ End Function
 :::
 
 **相关方法**
-
+::: code-group
 ```csharp
 MyAPI.AddJwtTokenVerify("pico_secret_779"); //添加 JWT 鉴权中间件，HS256 加密
 MyAPI.AddJwtTokenVerify("pico_secret_779", PicoServer.Crypto.HashType.SM3); //HMAC-SM3 国密
@@ -668,15 +667,27 @@ MyAPI.GetTimeStamp10();     // 获取当前10位时间戳
 MyAPI.GetTimeStamp13();     // 获取13位时间戳（毫秒）
 MyAPI.GetTimeStamp13(500);  // 获取13位时间戳，追加500毫秒
 ```
+```vb
+MyAPI.AddJwtTokenVerify("pico_secret_779") '添加 JWT 鉴权中间件，HS256 加密
+MyAPI.AddJwtTokenVerify("pico_secret_779", PicoServer.Crypto.HashType.SM3) 'HMAC-SM3 国密
 
----
+request.GetToken() '获取请求头中的 token 值
+MyAPI.Jwt.DecodePayload(token) '解码 JWT 负载
+MyAPI.Jwt.GenerateToken(payload) '创建 JWT token
+
+MyAPI.GetTimeStamp10(3600) '获取10位时间戳，追加3600秒（1小时）
+MyAPI.GetTimeStamp10() '获取当前10位时间戳
+MyAPI.GetTimeStamp13() '获取13位时间戳（毫秒）
+MyAPI.GetTimeStamp13(500) '获取13位时间戳，追加500毫秒
+
+:::
 
 ## 6. 加密工具（PicoServer.Crypto）
 
 > Pro 版提供的加密工具集，支持国密 SM3 算法。
 
 ### 哈希与签名
-
+::: code-group
 ```csharp
 // HMAC-SHA256 签名
 string signature = HS256.ComputeHmac256(data, key);
@@ -690,10 +701,32 @@ string hmacSm3 = SM3.ComputeHmacSM3(data, key);
 // SM3 密码哈希（带盐值和迭代次数）
 string passwordHash = SM3.HashPassword(password, salt, iterations);
 ```
+```vb
+// HMAC-SHA256 签名
+Dim signature As String = HS256.ComputeHmac256(data, key)
+
+// SM3 哈希计算（国密标准）
+Dim hash As Byte() = SM3.ComputeHash(data)
+
+// HMAC-SM3 签名（国密标准）
+Dim hmacSm3 As String = SM3.ComputeHmacSM3(data, key)
+
+// SM3 密码哈希（带盐值和迭代次数）
+Dim passwordHash As String = SM3.HashPassword(password, salt, iterations)
+```
+:::
 
 ### Base64Url 编解码
-
+::: code-group
 ```csharp
 string encoded = Base64Url.Encode(data);  // Base64Url 编码
 string decoded = Base64Url.Decode(encoded); // Base64Url 解码
 ```
+```vb
+// Base64Url 编码
+Dim encoded As String = Base64Url.Encode(data)
+
+// Base64Url 解码
+Dim decoded As String = Base64Url.Decode(encoded)
+```
+:::
