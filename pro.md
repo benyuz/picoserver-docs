@@ -7,7 +7,7 @@ next:
   link: /changelog
 ---
 
-# 🏷️ 版本对比
+# 🏷️ 版本说明
 
 PicoServer 采用双版本发行策略。**Pro 版 = 免费版 + 企业级特性**，API 完全兼容，可无缝升级。
 

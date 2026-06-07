@@ -10,24 +10,24 @@ hero:
     alt: PicoServer
   actions:
     - theme: brand
-      text: 🚀 Get Started
+      text: Get Started
       link: /en/guide
     - theme: alt
-      text: 📦 Download on NuGet
+      text: NuGet Package
       link: https://www.nuget.org/packages/PicoServer
 
 features:
   - title: 📦 Extremely Lightweight (only tens of KB)
     details: A single DLL of only tens of KB, no third-party dependencies. Works out-of-the-box with zero configuration. Legacy projects can integrate without modifying existing business code.
-  - title: ⚡ Compile-time Resolution (Native AOT)
-    details: Fully async non-blocking architecture, completely free of runtime reflection, natively supports Native AOT compilation, starts in milliseconds.
+  - title: ⚡ Native AOT Compilation
+    details: Fully async non-blocking architecture, completely free of runtime reflection, native Native AOT support, millisecond startup.
   - title: 🌍 Perfect Compatibility (.NET Standard 2.0)
-    details: Full support for .NET Framework 4.6.1+, Core, .NET 5/6/8+, cross-platform support for Linux, Windows, and macOS.
+    details: Full support for .NET Framework 4.6.1+, Core, .NET 5/6/8/10+, cross-platform support for Linux, Windows, macOS, iOS (via MAUI).
 ---
 
 <div class="version-bar">
   <span class="badge-soft">📜 Software Copyright 2026SR0568305</span>
-  <span class="badge-soft" style="background:#e8f5e9;border-color:#a5d6a7;">✅ Free for Commercial Use</span>
+  <span class="badge-soft">✅ Free for Commercial Use, Supports Xinchuang</span>
   <img src="https://img.shields.io/nuget/v/PicoServer" alt="Latest Version">
   <a href="https://www.nuget.org/packages/PicoServer" target="_blank">
     <img src="https://img.shields.io/nuget/dt/PicoServer" alt="Downloads">
@@ -36,7 +36,7 @@ features:
 
 ## 🧩 Add WebAPI with One Line of Code
 
-❤️ As natural as calling a method
+❤️ As natural as calling a method — no learning curve, no configuration, zero dependencies. One line of code to add Web API.
 
 ::: code-group
 
@@ -67,55 +67,79 @@ End Function
 
 :::
 
-> 💡 No IIS, No Kestrel, No Web development experience required, No learning curve, up and running in a minute
+## � .NET App + PicoServer = Web-Enabled Application
 
-## .NET App + PicoServer = Web-Enabled Application
+<div class="card-grid">
+  <div class="card">
+    <div class="card-icon">🏭</div>
+    <h3>Industrial HMI</h3>
+    <p>Remote-manageable Web HMI</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🖥️</div>
+    <h3>Desktop App (WinForms/WPF)</h3>
+    <p>Desktop service with API interfaces</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">📱</div>
+    <h3>Cross-Platform (MAUI/Avalonia)</h3>
+    <p>Cross-platform apps with API interfaces</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">📟</div>
+    <h3>Console Application</h3>
+    <p>Lightweight standalone Web service</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🌐</div>
+    <h3>Edge Device</h3>
+    <p>Edge node with Web capabilities</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">✨</div>
+    <h3>Your Application</h3>
+    <p>Endless possibilities for you to explore</p>
+  </div>
+</div>
 
-| 🧱 Your Existing Program | 🌟 + PicoServer |
-| :--- | :--- |
-| **Industrial HMI** | = Remote-manageable Web HMI |
-| **Desktop App (WinForms/WPF)** | = Desktop Service with API Interfaces |
-| **Console Application** | = Lightweight Standalone Web Service |
-| **Edge Device** | = Edge Node with Web Capabilities |
-| **Your Application** | = ? (Endless possibilities for you to explore) |
-
+> 💡 No IIS, No Kestrel, No Web development experience required — up and running in a minute
 
 ## 🎯 Typical Scenarios
 
-<div class="scene-grid">
+<div class="card-grid">
 
-<div class="scene-card">
-<div class="scene-icon">🌐</div>
+<div class="card">
+<div class="card-icon">🌐</div>
 <h3>Minimal Web API</h3>
-<p>No need to deal with complex frameworks — just a few lines of code to quickly implement API services. Built-in Token / JWT authentication.</p>
+<p>No need for complex frameworks — just a few lines of code to quickly implement API services. Built-in Token / JWT authentication.</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">🔄</div>
+<div class="card">
+<div class="card-icon">🔄</div>
 <h3>Empowering Legacy Projects</h3>
 <p>Quickly add Web capabilities to old .NET Framework projects without refactoring or changing existing business code.</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">🖥️</div>
+<div class="card">
+<div class="card-icon">🖥️</div>
 <h3>Desktop App Web-Enabling</h3>
-<p>Add remote management interfaces to WinForm / WPF / MAUI / Avalonia applications. Single DLL embedding with AOT support.</p>
+<p>Add remote management interfaces to WinForm / WPF / MAUI / Avalonia apps. Single DLL embedding with AOT support.</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">🏭</div>
+<div class="card">
+<div class="card-icon">🏭</div>
 <h3>Edge Gateway / Industrial HMI</h3>
-<p>Industrial gateways and edge computing scenarios with strict size, CPU, and memory footprint constraints. Extremely low resource consumption.</p>
+<p>Industrial gateways and edge computing scenarios with strict size, CPU, and memory constraints. Extremely low resource consumption.</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">🌍</div>
+<div class="card">
+<div class="card-icon">🌍</div>
 <h3>Cross-Platform Projects</h3>
-<p>Windows, macOS, Linux — the glue feature works with any library, one codebase runs everywhere.</p>
+<p>Windows, macOS, Linux — glue feature works with any library, one codebase runs everywhere.</p>
 </div>
 
-<div class="scene-card">
-<div class="scene-icon">📊</div>
+<div class="card">
+<div class="card-icon">📊</div>
 <h3>Lightweight Web Applications</h3>
 <p>Web admin backends, SPA applications, small-to-medium websites. No ASP.NET Core required, no IIS dependency.</p>
 </div>
@@ -142,32 +166,40 @@ End Function
   margin: 8px 0;
 }
 
-.scene-grid {
+/* Unified card-grid and card styles */
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
   margin: 24px 0;
 }
-.scene-card {
+
+.card {
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   padding: 24px;
   transition: all 0.3s ease;
+  background: var(--vp-c-bg-soft);
 }
-.scene-card:hover {
+
+.card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px var(--vp-c-shadow);
+  border-color: var(--vp-c-brand);
 }
-.scene-icon {
+
+.card-icon {
   font-size: 28px;
   margin-bottom: 12px;
 }
-.scene-card h3 {
-  font-size: 16px;
+
+.card h3 {
+  font-size: 18px;
   font-weight: 600;
   margin: 0 0 8px 0;
 }
-.scene-card p {
+
+.card p {
   font-size: 14px;
   line-height: 1.6;
   color: var(--vp-c-text-2);
