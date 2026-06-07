@@ -226,10 +226,11 @@ End Function
 }
 
 .card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.4;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+    margin: 0!important;
 }
 
 .card p {
