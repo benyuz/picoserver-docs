@@ -139,7 +139,7 @@ export default defineConfig({
           },
           {
             text: '📟 PicoServer.Nano',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'ESP32 Quick Start', link: '/en/nano-guide' },
               { text: 'Benchmark', link: '/en/nano-benchmark' }

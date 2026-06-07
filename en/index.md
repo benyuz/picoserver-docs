@@ -67,37 +67,49 @@ End Function
 
 :::
 
-## � .NET App + PicoServer = Web-Enabled Application
+## 🔄 .NET App + PicoServer = Web-Enabled Application
 
 <div class="card-grid">
   <div class="card">
-    <div class="card-icon">🏭</div>
-    <h3>Industrial HMI</h3>
+    <div class="card-header">
+      <div class="card-icon">🏭</div>
+      <h3>Industrial HMI</h3>
+    </div>
     <p>Remote-manageable Web HMI</p>
   </div>
   <div class="card">
-    <div class="card-icon">🖥️</div>
-    <h3>Desktop App (WinForms/WPF)</h3>
+    <div class="card-header">
+      <div class="card-icon">🖥️</div>
+      <h3>Desktop App (WinForms/WPF)</h3>
+    </div>
     <p>Desktop service with API interfaces</p>
   </div>
   <div class="card">
-    <div class="card-icon">📱</div>
-    <h3>Cross-Platform (MAUI/Avalonia)</h3>
+    <div class="card-header">
+      <div class="card-icon">📱</div>
+      <h3>Cross-Platform (MAUI/Avalonia)</h3>
+    </div>
     <p>Cross-platform apps with API interfaces</p>
   </div>
   <div class="card">
-    <div class="card-icon">📟</div>
-    <h3>Console Application</h3>
+    <div class="card-header">
+      <div class="card-icon">📟</div>
+      <h3>Console Application</h3>
+    </div>
     <p>Lightweight standalone Web service</p>
   </div>
   <div class="card">
-    <div class="card-icon">🌐</div>
-    <h3>Edge Device</h3>
+    <div class="card-header">
+      <div class="card-icon">🌐</div>
+      <h3>Edge Device</h3>
+    </div>
     <p>Edge node with Web capabilities</p>
   </div>
   <div class="card">
-    <div class="card-icon">✨</div>
-    <h3>Your Application</h3>
+    <div class="card-header">
+      <div class="card-icon">✨</div>
+      <h3>Your Application</h3>
+    </div>
     <p>Endless possibilities for you to explore</p>
   </div>
 </div>
@@ -109,38 +121,50 @@ End Function
 <div class="card-grid">
 
 <div class="card">
+<div class="card-header">
 <div class="card-icon">🌐</div>
 <h3>Minimal Web API</h3>
+</div>
 <p>No need for complex frameworks — just a few lines of code to quickly implement API services. Built-in Token / JWT authentication.</p>
 </div>
 
 <div class="card">
+<div class="card-header">
 <div class="card-icon">🔄</div>
 <h3>Empowering Legacy Projects</h3>
+</div>
 <p>Quickly add Web capabilities to old .NET Framework projects without refactoring or changing existing business code.</p>
 </div>
 
 <div class="card">
+<div class="card-header">
 <div class="card-icon">🖥️</div>
 <h3>Desktop App Web-Enabling</h3>
+</div>
 <p>Add remote management interfaces to WinForm / WPF / MAUI / Avalonia apps. Single DLL embedding with AOT support.</p>
 </div>
 
 <div class="card">
+<div class="card-header">
 <div class="card-icon">🏭</div>
 <h3>Edge Gateway / Industrial HMI</h3>
+</div>
 <p>Industrial gateways and edge computing scenarios with strict size, CPU, and memory constraints. Extremely low resource consumption.</p>
 </div>
 
 <div class="card">
+<div class="card-header">
 <div class="card-icon">🌍</div>
 <h3>Cross-Platform Projects</h3>
+</div>
 <p>Windows, macOS, Linux — glue feature works with any library, one codebase runs everywhere.</p>
 </div>
 
 <div class="card">
+<div class="card-header">
 <div class="card-icon">📊</div>
 <h3>Lightweight Web Applications</h3>
+</div>
 <p>Web admin backends, SPA applications, small-to-medium websites. No ASP.NET Core required, no IIS dependency.</p>
 </div>
 
@@ -188,15 +212,23 @@ End Function
   border-color: var(--vp-c-brand);
 }
 
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
 .card-icon {
   font-size: 28px;
-  margin-bottom: 12px;
+  line-height: 1;
 }
 
 .card h3 {
   font-size: 18px;
   font-weight: 600;
-  margin: 0 0 8px 0;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .card p {
