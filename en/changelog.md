@@ -15,6 +15,10 @@ Recommended to use the latest version of PicoServer for complete functionality. 
 
 > Numeric version numbers are free edition (free for commercial use). Date version numbers are Pro edition, which includes all features of the free edition.
 
+## Pro v2026.6.9
+- 🔓 `JwtHelper.VerifyToken(string token)` changed to **public**
+  Enterprise customers can directly call the verification method, combine or customize authentication middleware as needed, without rewriting algorithms.
+
 ## V1.7.4
 ➕ `AddStaticFiles` middleware adds automatic multi-level directory `index.html` matching. When accessing paths ending with `/`, automatically returns `index.html` under that directory.
 

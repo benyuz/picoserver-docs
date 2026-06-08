@@ -59,6 +59,7 @@ PicoServer 采用双版本发行策略。**Pro 版 = 免费版 + 企业级特性
 | 国密 SM3 哈希       | `PicoServer.Crypto.SM3`                        |
 | JWT HMAC-SM3 签名 | `AddJwtTokenVerify(secret, HashType.SM3)`      |
 | SM3 密码哈希（拉伸）    | `SM3.HashPassword(password, salt, iterations)` |
+| 公开 JWT 验证方法     | `JwtHelper.VerifyToken(token)` 按需定制认证逻辑 |
 | 限定 IP 访问        | `MyAPI.StartServer("127.0.0.1", 8891)`         |
 | 请求上下文 Items     | `request.Items()` 中间件传值                        |
 | 更多企业级特性 | - |

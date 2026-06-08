@@ -59,6 +59,7 @@ PicoServer uses a dual-version release strategy. **Pro = Free + Enterprise Featu
 | GM/SM3 hashing      | `PicoServer.Crypto.SM3`                                |
 | JWT HMAC-SM3 signing | `AddJwtTokenVerify(secret, HashType.SM3)`              |
 | SM3 password hashing | `SM3.HashPassword(password, salt, iterations)`          |
+| Public JWT verification | `JwtHelper.VerifyToken(token)` for custom auth logic |
 | IP restriction      | `MyAPI.StartServer("127.0.0.1", 8891)`                |
 | Request context items | `request.Items()` for middleware value passing         |
 | More enterprise features | -                                               |
