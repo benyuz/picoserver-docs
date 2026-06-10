@@ -688,4 +688,4 @@ MyAPI.GetTimeStamp13(500) ' Get 13-digit timestamp, add 500 milliseconds
 
 ## 6. Encryption Tools (PicoServer.Crypto)
 
-> Encryption toolkit provided by Pro version, supports GM/SM3 algorithm.
+> PicoServer built-in encryption toolkit, supports GM/SM3 algorithm.

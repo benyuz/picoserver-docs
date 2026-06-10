@@ -11,7 +11,7 @@ next:
 
 ## 1. Route Control and Request Parameter Parsing
 
-PicoServer supports four routing styles: **Exact Route, Wildcard Route, RESTful Style Route, and Attribute Routing (Pro with AOT support)**.
+PicoServer supports four routing styles: **Exact Route, Wildcard Route, RESTful Style Route, and Attribute Routing**.
 
 ::: code-group
 
@@ -144,7 +144,7 @@ request.GetQuery();              // Get query string, returns null if not found
 request.GetQuery<T>();           // Auto-cast and read query string, returns default value on failure
 request.ParseForm();             // Strongly-typed Form dictionary parsing
 request.ReadBodyAsStringAsync(); // Stream read body text (commonly used for JSON)
-request.Items();                 // Request context property dictionary, for middleware value passing 【Pro】
+request.Items();                 // Request context property dictionary, for middleware value passing
 ```
 
 ```vb
@@ -152,7 +152,7 @@ request.GetQuery()              ' Get query string, returns null if not found
 request.GetQuery(Of T)()        ' Auto-cast and read query string, returns default value on failure
 request.ParseForm()             ' Strongly-typed Form dictionary parsing
 request.ReadBodyAsStringAsync() ' Stream read body text (commonly used for JSON)
-request.Items()                 ' Request context property dictionary, for middleware value passing 【Pro】
+request.Items()                 ' Request context property dictionary, for middleware value passing
 ```
 
 :::
@@ -238,7 +238,7 @@ The cross-platform method `GetContentType(".ext")` produces strictly consistent 
 Implement automatic route scanning by tagging controllers.
 
 ::: warning AOT Compatibility Note
-Free version attribute routing uses the extension package `PicoServer.Extensions` based on runtime reflection; **Pro version attribute routing uses Source Generator for compile-time generation, 100% compatible with Native AOT.**
+Attribute routing uses Source Generator for compile-time generation, ensuring Native AOT compatibility.
 :::
 
 ::: code-group
@@ -366,8 +366,8 @@ MyAPI.MapDelete("/api/user/{id}", AddressOf DeleteUser)
 ```csharp
 MyAPI.StartServer();                      // Start server, default port 8090
 MyAPI.StartServer(8891);                  // Start server, specify port
-MyAPI.StartServer("127.0.0.1");           // Localhost only (Pro)
-MyAPI.StartServer("127.0.0.1", 8891);     // Localhost + specify port (Pro)
+MyAPI.StartServer("127.0.0.1");           // Localhost only
+MyAPI.StartServer("127.0.0.1", 8891);     // Localhost + specify port
 MyAPI.StopServer();                       // Stop server
 ```
 

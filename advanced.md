@@ -684,7 +684,7 @@ MyAPI.GetTimeStamp13(500) '获取13位时间戳，追加500毫秒
 
 ## 6. 加密工具（PicoServer.Crypto）
 
-> Pro 版提供的加密工具集，支持国密 SM3 算法。
+> PicoServer 内置加密工具集，支持国密 SM3 算法。
 
 ### 哈希与签名
 ::: code-group

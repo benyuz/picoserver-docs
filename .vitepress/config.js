@@ -63,8 +63,8 @@ export default defineConfig({
             ]
           },
           {
-            text: '📦 版本说明',
-            link: '/pro'
+            text: '📦 下载安装',
+            link: '/guide'
           },
           {
             text: '📊 性能测试',
@@ -130,8 +130,8 @@ export default defineConfig({
             ]
           },
           {
-            text: '📦 Version Information',
-            link: '/en/pro'
+            text: '📦 Download & Install',
+            link: '/en/guide'
           },
           {
             text: '📊 Benchmark',

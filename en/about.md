@@ -12,4 +12,4 @@ It is a complement to the .NET platform, providing zero-dependency, minimal-conf
 
 ## 🤝 Contact Us
 
-> For bug reports, feature requests, documentation improvements, or Pro edition licensing, please contact GitHub [benyuz](https://github.com/benyuz) or QQ: 1035675066, Email: picoserver@qq.com.
+> For bug reports, feature requests, or documentation improvements, please contact GitHub [benyuz](https://github.com/benyuz) or QQ: 1035675066, Email: picoserver@qq.com.

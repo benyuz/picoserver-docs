@@ -28,7 +28,7 @@ PicoServer is a lightweight Web capability glue library built on .NET Standard 2
 - 🌍 **Full Compatibility** — .NET Framework 4.6.1+ through .NET 10+, cross-platform Linux, Windows, macOS
 - 🔌 **One-Line WebAPI** — `AddRoute` + `StartServer`, as natural as calling a method
 - 🔄 **WebSocket** — Full-duplex communication, heartbeat detection, broadcast push, tested at tens of thousands of connections
-- 🔐 **Token / JWT Authentication** — Built-in simple token and JWT auth, with GM/SM3 support (Pro)
+- 🔐 **Token / JWT Authentication** — Built-in simple token and JWT auth, with GM/SM3 support
 - 📁 **Static File Hosting** — Caching strategies, MIME detection, CORS configuration, SPA support, native anti-directory traversal protection
 - 🧩 **Custom Middleware** — `AddMiddleware` fully open, sequential execution, on-demand registration
 
@@ -48,12 +48,9 @@ app.StartServer();
 
 For complete usage guides, API examples, and performance benchmark reports, visit: [PicoServer Official Docs](https://picoserver.cn)
 
-## Editions
+## License
 
-| Edition | Description |
-|---------|-------------|
-| **Free** | Free for commercial use, complete core functionality without limits |
-| **Pro** | Commercial license, includes GM crypto, attribute routing, and enhanced features |
+**Free for commercial use** — complete core functionality without limits.
 
 ## Use Cases
 

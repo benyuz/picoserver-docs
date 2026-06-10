@@ -152,7 +152,7 @@ request.GetQuery()              ' 获取查询字符串，不存在返回 null
 request.GetQuery(Of T)()        ' 自动转型读取查询字符串，失败返回默认值
 request.ParseForm()             ' 强类型解析 Form 表单字典
 request.ReadBodyAsStringAsync() ' 流式读取 Body 文本（常用于 JSON）
-request.Items()                 ' 请求上下文属性字典，用于中间件传值 【Pro版】
+request.Items()                 ' 请求上下文属性字典，用于中间件传值
 ```
 
 :::
@@ -238,7 +238,7 @@ End Function
 通过在控制器上打标签实现自动路由扫描。
 
 ::: warning AOT 兼容性提示
-免费版特性路由通过扩展包 `PicoServer.Extensions` 基于运行时反射实现；**Pro 版特性路由采用 Source Generator 编译期提前生成，100% 完美适配 Native AOT。**
+特性路由采用 Source Generator 编译期生成，确保原生 AOT 兼容。
 :::
 
 ::: code-group
@@ -366,8 +366,8 @@ MyAPI.MapDelete("/api/user/{id}", AddressOf DeleteUser)
 ```csharp
 MyAPI.StartServer();                      // 开启服务，默认端口 8090
 MyAPI.StartServer(8891);                  // 开启服务，指定端口
-MyAPI.StartServer("127.0.0.1");           // 限定本机访问（Pro版）
-MyAPI.StartServer("127.0.0.1", 8891);     // 限定本机+指定端口（Pro版）
+MyAPI.StartServer("127.0.0.1");           // 限定本机访问
+MyAPI.StartServer("127.0.0.1", 8891);     // 限定本机+指定端口
 MyAPI.StopServer();                       // 停止服务
 ```
 
