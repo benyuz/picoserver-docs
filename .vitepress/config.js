@@ -63,11 +63,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '📦 下载安装',
-            link: '/guide'
-          },
-          {
-            text: '📊 性能测试',
+            text: ' 性能测试',
             link: '/benchmark'
           },
           {
@@ -130,11 +126,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '📦 Download & Install',
-            link: '/en/guide'
-          },
-          {
-            text: '📊 Benchmark',
+            text: ' Benchmark',
             link: '/en/benchmark'
           },
           {
