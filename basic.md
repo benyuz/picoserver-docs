@@ -11,7 +11,7 @@ next:
 
 ## 1. 路由控制与请求参数解析
 
-PicoServer 支持四种路由解析风格：**精准路由、星号通配路由、RESTful 风格路由、特性路由（Pro版支持 AOT）**。
+PicoServer 支持四种路由解析风格：**精准路由、星号通配路由、RESTful 风格路由、特性路由**。
 
 ::: code-group
 
@@ -144,7 +144,7 @@ request.GetQuery();              // 获取查询字符串，不存在返回 null
 request.GetQuery<T>();           // 自动转型读取查询字符串，失败返回默认值
 request.ParseForm();             // 强类型解析 Form 表单字典
 request.ReadBodyAsStringAsync(); // 流式读取 Body 文本（常用于 JSON）
-request.Items();                 // 请求上下文属性字典，用于中间件传值 【Pro版】
+request.Items();                 // 请求上下文属性字典，用于中间件传值
 ```
 
 ```vb
