@@ -13,6 +13,9 @@ PicoServer, as a Web capability glue library, is supported by lightweight HTTP s
 
 > Recommended to use the latest version of PicoServer for complete functionality. Minimalist design with no breaking changes, safe to upgrade.
 
+## V1.7.5
+- ➕ `JwtHelper` adds new public method `VerifyToken(string token)`, complete JWT token validation (signature + exp), convenient for custom validation middleware.
+
 ## V1.7.4
 - ➕ `AddStaticFiles` middleware adds automatic multi-level directory `index.html` matching. When accessing paths ending with `/`, automatically returns `index.html` under that directory.
 
