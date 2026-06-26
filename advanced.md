@@ -661,6 +661,7 @@ MyAPI.AddJwtTokenVerify("pico_secret_779", PicoServer.Crypto.HashType.SM3); //HM
 request.GetToken(); //获取请求头中的 token 值
 MyAPI.Jwt.DecodePayload(token); //解码 JWT 负载
 MyAPI.Jwt.GenerateToken(payload); //创建 JWT token
+MyAPI.Jwt.VerifyToken(token); //完整验证 JWT token（验签 + 验 exp）
 
 MyAPI.GetTimeStamp10(3600); // 获取10位时间戳，追加3600秒（1小时）
 MyAPI.GetTimeStamp10();     // 获取当前10位时间戳
@@ -674,6 +675,7 @@ MyAPI.AddJwtTokenVerify("pico_secret_779", PicoServer.Crypto.HashType.SM3) 'HMAC
 request.GetToken() '获取请求头中的 token 值
 MyAPI.Jwt.DecodePayload(token) '解码 JWT 负载
 MyAPI.Jwt.GenerateToken(payload) '创建 JWT token
+MyAPI.Jwt.VerifyToken(token) '完整验证 JWT token（验签 + 验 exp）
 
 MyAPI.GetTimeStamp10(3600) '获取10位时间戳，追加3600秒（1小时）
 MyAPI.GetTimeStamp10() '获取当前10位时间戳

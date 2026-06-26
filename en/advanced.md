@@ -663,6 +663,7 @@ MyAPI.AddJwtTokenVerify("pico_secret_779", PicoServer.Crypto.HashType.SM3); // H
 request.GetToken(); // Get token value from request header
 MyAPI.Jwt.DecodePayload(token); // Decode JWT payload
 MyAPI.Jwt.GenerateToken(payload); // Create JWT token
+MyAPI.Jwt.VerifyToken(token); // Complete JWT token validation (signature + exp)
 
 MyAPI.GetTimeStamp10(3600); // Get 10-digit timestamp, add 3600 seconds (1 hour)
 MyAPI.GetTimeStamp10();     // Get current 10-digit timestamp
@@ -677,6 +678,7 @@ MyAPI.AddJwtTokenVerify("pico_secret_779", PicoServer.Crypto.HashType.SM3) ' HMA
 request.GetToken() ' Get token value from request header
 MyAPI.Jwt.DecodePayload(token) ' Decode JWT payload
 MyAPI.Jwt.GenerateToken(payload) ' Create JWT token
+MyAPI.Jwt.VerifyToken(token) ' Complete JWT token validation (signature + exp)
 
 MyAPI.GetTimeStamp10(3600) ' Get 10-digit timestamp, add 3600 seconds (1 hour)
 MyAPI.GetTimeStamp10() ' Get current 10-digit timestamp
