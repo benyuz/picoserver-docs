@@ -1,4 +1,6 @@
 ---
+title: 自定义中间件 - PicoServer
+description: PicoServer 自定义中间件开发指南，扩展请求处理流程
 prev:
   text: 高级能力（含鉴权）
   link: /advanced

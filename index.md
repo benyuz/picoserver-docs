@@ -1,5 +1,7 @@
 ---
 layout: home
+title: PicoServer - 轻量级零依赖 .NET Web 能力胶水库
+description: 轻量级零依赖 .NET Web 能力胶水库,跨平台,高性能,支持 AOT,极简开发
 
 hero:
   name: "PicoServer"
@@ -76,35 +78,35 @@ End Function
       <div class="card-icon">🏭</div>
       <h3>工控上位机</h3>
     </div>
-    <p>可远程管理的 Web 化上位机</p>
+    <p>远程监控、参数配置、数据上报 — 让工控系统具备 Web 管理能力</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon">🖥️</div>
       <h3>桌面应用 (WinForms/WPF)</h3>
     </div>
-    <p>带 API 接口的桌面服务</p>
+    <p>无需部署服务器，桌面应用直接对外提供 API，支持远程调用</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon">📱</div>
       <h3>跨平台项目 (MAUI/Avalonia)</h3>
     </div>
-    <p>带 API 接口的跨平台应用</p>
+    <p>一套代码跨端运行，同时提供 Web API，实现应用与服务一体化</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon">📟</div>
       <h3>控制台程序</h3>
     </div>
-    <p>轻量跨平台独立 Web 服务</p>
+    <p>单文件部署，零依赖运行，快速搭建后台服务</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon">🌐</div>
       <h3>边缘设备端</h3>
     </div>
-    <p>具备 Web 能力的边缘节点</p>
+    <p>资源受限环境下的 Web 服务，支持 AOT 编译，极低内存占用</p>
   </div>
   <div class="card">
     <div class="card-header">

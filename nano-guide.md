@@ -1,4 +1,6 @@
 ---
+title: ESP32 快速上手 - PicoServer.Nano
+description: PicoServer.Nano ESP32 开发入门指南，在嵌入式设备上运行 Web 服务
 prev:
   text: 基准测试
   link: /benchmark

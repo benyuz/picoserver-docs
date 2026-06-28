@@ -1,4 +1,6 @@
 ---
+title: 性能测试 - PicoServer
+description: PicoServer 性能测试报告，包含 QPS、内存占用、CPU 使用率等指标
 prev:
   text: 自定义中间件
   link: /middleware

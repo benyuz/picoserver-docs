@@ -1,4 +1,6 @@
 ---
+title: 集成案例 - PicoServer
+description: PicoServer 实际应用案例，涵盖工业 IoT、桌面应用、跨平台项目等场景
 prev:
   text: PicoServer.Nano 性能测试
   link: /nano-benchmark

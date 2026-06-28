@@ -1,4 +1,6 @@
 ---
+title: Quick Start - PicoServer
+description: PicoServer quick start guide, including installation and first Web API example
 next:
   text: Basic Features
   link: /en/basic

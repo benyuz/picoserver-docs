@@ -1,5 +1,7 @@
 ---
 layout: home
+title: PicoServer - Lightweight Zero-dependency .NET Web Library
+description: Lightweight zero-dependency .NET Web capability glue library, cross-platform, high-performance, AOT support, minimal development
 
 hero:
   name: "PicoServer"
@@ -75,35 +77,35 @@ End Function
       <div class="card-icon">🏭</div>
       <h3>Industrial HMI</h3>
     </div>
-    <p>Remote-manageable Web HMI</p>
+    <p>Remote monitoring, parameter configuration, data reporting — bring Web management to industrial control systems</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon">🖥️</div>
       <h3>Desktop App (WinForms/WPF)</h3>
     </div>
-    <p>Desktop service with API interfaces</p>
+    <p>No server deployment required — desktop apps directly provide APIs, supporting remote calls</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon">📱</div>
       <h3>Cross-Platform (MAUI/Avalonia)</h3>
     </div>
-    <p>Cross-platform apps with API interfaces</p>
+    <p>One codebase runs everywhere, providing Web APIs simultaneously — unified application and service</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon">📟</div>
       <h3>Console Application</h3>
     </div>
-    <p>Lightweight standalone Web service</p>
+    <p>Single-file deployment, zero-dependency runtime — quickly build backend services</p>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-icon">🌐</div>
       <h3>Edge Device</h3>
     </div>
-    <p>Edge node with Web capabilities</p>
+    <p>Web services in resource-constrained environments — AOT compiled, ultra-low memory footprint</p>
   </div>
   <div class="card">
     <div class="card-header">

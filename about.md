@@ -1,4 +1,6 @@
 ---
+title: 关于我们 - PicoServer
+description: PicoServer 项目背景、开发理念和团队介绍
 prev:
   text: 更新日志
   link: /changelog

@@ -1,4 +1,6 @@
 ---
+title: 高级能力（含鉴权） - PicoServer
+description: PicoServer 高级能力，包括 JWT 鉴权、WebSocket、SSE、文件上传下载等
 prev:
   text: 基础能力
   link: /basic

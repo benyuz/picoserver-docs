@@ -1,4 +1,6 @@
 ---
+title: Integration Examples - PicoServer
+description: PicoServer real-world use cases covering IoT, desktop apps, cross-platform projects
 prev:
   text: PicoServer.Nano Benchmark
   link: /en/nano-benchmark

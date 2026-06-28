@@ -1,4 +1,6 @@
 ---
+title: Advanced Features - PicoServer
+description: PicoServer advanced capabilities including JWT authentication, WebSocket, SSE, file upload/download
 prev:
   text: Basic Features
   link: /en/basic

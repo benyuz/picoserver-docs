@@ -1,4 +1,6 @@
 ---
+title: Changelog - PicoServer
+description: PicoServer version update history with new features, fixes and improvements
 prev:
   text: Integration Examples
   link: /en/examples

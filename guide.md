@@ -1,4 +1,6 @@
 ---
+title: 快速入门 - PicoServer
+description: PicoServer 快速入门指南，包含安装方法和第一个 Web API 示例
 next:
   text: 基础能力
   link: /basic

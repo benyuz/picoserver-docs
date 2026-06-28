@@ -7,6 +7,19 @@ export default defineConfig({
   lastUpdated: true, 
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'canonical', href: 'https://picoserver.cn' }],
+    ['meta', { name: 'theme-color', content: '#3b82f6' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
+    ['meta', { property: 'og:title', content: 'PicoServer - 轻量级零依赖 .NET Web 能力胶水库' }],
+    ['meta', { property: 'og:description', content: '轻量级零依赖 .NET Web 能力胶水库,跨平台,高性能,支持 AOT,极简开发' }],
+    ['meta', { property: 'og:url', content: 'https://picoserver.cn' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:image', content: 'https://picoserver.cn/logo.png' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:title', content: 'PicoServer - 轻量级零依赖 .NET Web 能力胶水库' }],
+    ['meta', { name: 'twitter:description', content: '轻量级零依赖 .NET Web 能力胶水库,跨平台,高性能,支持 AOT,极简开发' }],
+    ['meta', { name: 'twitter:image', content: 'https://picoserver.cn/logo.png' }],
     ['script', {}, `
       var _hmt = _hmt || [];
       (function() {

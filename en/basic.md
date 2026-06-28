@@ -1,4 +1,6 @@
 ---
+title: Basic Features - PicoServer
+description: PicoServer basic capabilities including routing, request/response handling, static file serving
 prev:
   text: Quick Start
   link: /en/guide

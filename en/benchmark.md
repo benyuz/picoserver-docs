@@ -1,4 +1,6 @@
 ---
+title: Benchmark - PicoServer
+description: PicoServer performance benchmark report including QPS, memory usage, CPU metrics
 prev:
   text: Custom Middleware
   link: /en/middleware

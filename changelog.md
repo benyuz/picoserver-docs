@@ -1,4 +1,6 @@
 ---
+title: 更新日志 - PicoServer
+description: PicoServer 版本更新记录，包含新增功能、修复内容和改进
 prev:
   text: 集成案例
   link: /examples

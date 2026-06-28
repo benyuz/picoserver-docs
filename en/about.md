@@ -1,4 +1,6 @@
 ---
+title: About - PicoServer
+description: PicoServer project background, development philosophy and team introduction
 prev:
   text: Changelog
   link: /en/changelog

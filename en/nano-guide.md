@@ -1,4 +1,6 @@
 ---
+title: ESP32 Quick Start - PicoServer.Nano
+description: PicoServer.Nano ESP32 development guide, running Web services on embedded devices
 prev:
   text: Benchmark
   link: /en/benchmark

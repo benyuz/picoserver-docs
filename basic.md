@@ -1,4 +1,6 @@
 ---
+title: 基础能力 - PicoServer
+description: PicoServer 基础能力详解，包括路由、请求响应处理、静态文件服务等
 prev:
   text: 快速入门（含安装）
   link: /guide

@@ -1,4 +1,6 @@
 ---
+title: PicoServer.Nano 性能测试
+description: PicoServer.Nano ESP32 性能测试报告，嵌入式场景下的 Web 服务性能
 prev:
   text: ESP32 快速上手
   link: /nano-guide

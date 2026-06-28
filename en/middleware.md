@@ -1,4 +1,6 @@
 ---
+title: Custom Middleware - PicoServer
+description: PicoServer custom middleware development guide, extending request processing pipeline
 prev:
   text: Advanced Features
   link: /en/advanced

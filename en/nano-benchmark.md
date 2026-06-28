@@ -1,4 +1,6 @@
 ---
+title: PicoServer.Nano Benchmark
+description: PicoServer.Nano ESP32 performance report, Web service performance in embedded scenarios
 prev:
   text: ESP32 Quick Start
   link: /en/nano-guide
