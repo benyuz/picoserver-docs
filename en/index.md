@@ -107,10 +107,10 @@ End Function
   </div>
   <div class="card">
     <div class="card-header">
-      <div class="card-icon">✨</div>
-      <h3>Your Application</h3>
+      <div class="card-icon">🤖</div>
+      <h3>AI Agent & MCP Services</h3>
     </div>
-    <p>Endless possibilities for you to explore</p>
+    <p>Serve as tool service base for AI Agents or MCP service endpoints. Millisecond startup, ultra-low resource consumption — enable every agent capability to quickly and stably provide API services.</p>
   </div>
 </div>
 

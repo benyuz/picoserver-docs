@@ -108,10 +108,10 @@ End Function
   </div>
   <div class="card">
     <div class="card-header">
-      <div class="card-icon">✨</div>
-      <h3>你的程序</h3>
+      <div class="card-icon">🤖</div>
+      <h3>AI Agent 与 MCP 服务</h3>
     </div>
-    <p>留给你的无限可能</p>
+    <p>作为 AI Agent 的工具服务底座或 MCP 服务端点。毫秒级启动、极低资源占用，让每个智能体功能都能快速、稳定地对外提供 API 服务。</p>
   </div>
 </div>
 
