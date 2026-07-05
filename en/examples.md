@@ -18,4 +18,5 @@ next:
 - [《MAUI Embedded Web Architecture Practice》— PicoServer Lightweight Cross-platform Web Service Solution](https://www.cnblogs.com/densen2014/p/19674503)
 - An industrial IoT user deployed on Buildroot embedded Linux with 64MB memory, using PicoServer AOT for device Web management, data collection, and machine networking, effectively reducing costs.
 - A clothing industry user leverages PicoServer's minimalist WebAPI development capabilities to develop internal applications for web-based order production tracking.
-- PicoServer User Center supports user management, order management, online payments, and fully automated product sales.
+- [Written Authorization System](https://s.juziyu.cn/) — supports user management, order management, online payments, and fully automated product sales.
+- A Spanish company used PicoServer + H5 to completely rebuild a WinForms project, enabling cross-platform deployment and reducing development and maintenance costs.

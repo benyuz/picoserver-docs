@@ -58,7 +58,8 @@ For complete usage guides, API examples, and performance benchmark reports, visi
 - [《MAUI 嵌入式 Web 架构实战》— PicoServer 轻量级跨平台 Web 服务方案](https://www.cnblogs.com/densen2014/p/19674503)
 - An industrial IoT user deployed PicoServer on a Buildroot embedded Linux with 64MB RAM, using AOT compilation for device Web management, data acquisition, and IIoT networking — effectively reducing costs.
 - An apparel industry user leveraged PicoServer's minimalist WebAPI to build internal applications for web-based order production tracking.
-- PicoServer User Center: supports user management, order management, online payment and collection — fully automated product sales.
+- [Written Authorization System](https://s.juziyu.cn/): supports user management, order management, online payment and collection — fully automated product sales.
+- A Spanish company used PicoServer + H5 to completely rebuild a WinForms project, enabling cross-platform deployment and reducing development and maintenance costs.
 
 ## Contact
 
