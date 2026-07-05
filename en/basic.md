@@ -239,8 +239,8 @@ The cross-platform method `GetContentType(".ext")` produces strictly consistent 
 
 Implement automatic route scanning by tagging controllers.
 
-::: warning AOT Compatibility Note
-Attribute routing uses Source Generator for compile-time generation, ensuring Native AOT compatibility.
+::: tip Extension Package
+Attribute routing is provided by the [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) extension package.
 :::
 
 ::: code-group

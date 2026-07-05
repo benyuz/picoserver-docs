@@ -239,8 +239,8 @@ End Function
 
 通过在控制器上打标签实现自动路由扫描。
 
-::: warning AOT 兼容性提示
-特性路由采用 Source Generator 编译期生成，确保原生 AOT 兼容。
+::: tip 扩展包
+特性路由功能由 [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) 扩展包提供。
 :::
 
 ::: code-group
