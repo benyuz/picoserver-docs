@@ -28,7 +28,7 @@ jobs:
       - name: 2. 设置 Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: 3. 安装 VitePress 依赖
         run: npm install
       - name: 4. 运行编译
