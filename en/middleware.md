@@ -96,7 +96,7 @@ Console.WriteLine("File server started: http://127.0.0.1:8090")
 
 ---
 
-## 2. Custom Middleware — Dynamic Route Handler
+## 2. Dynamic Route Handler
 
 This example demonstrates how to use custom middleware's extension functionality to implement **dynamic routing**, completing **path matching**, **method dispatch**, and **request termination** within a single logic block, allowing flexible middleware customization.
 
