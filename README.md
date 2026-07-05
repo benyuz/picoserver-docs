@@ -60,6 +60,7 @@ For complete usage guides, API examples, and performance benchmark reports, visi
 - An apparel industry user leveraged PicoServer's minimalist WebAPI to build internal applications for web-based order production tracking.
 - [Written Authorization System](https://s.juziyu.cn/): supports user management, order management, online payment and collection — fully automated product sales.
 - A Spanish company used PicoServer + H5 to completely rebuild a WinForms project, enabling cross-platform deployment and reducing development and maintenance costs.
+- An enterprise customer used PicoServer to upgrade their microservices to handle millions of QPS daily. CPU utilization consistently stays below 5%, memory growth remains stable — rated extremely reliable by the user.
 
 ## Contact
 
