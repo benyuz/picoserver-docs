@@ -53,6 +53,7 @@ export default defineConfig({
         nav: [
           { text: '首页', link: '/' },
           { text: '快速入门', link: '/guide' },
+          { text: '性能测试', link: '/benchmark' },
           { text: '集成案例', link: '/examples' },
           { text: '更新日志', link: '/changelog' },
           { text: '关于我们', link: '/about' }
@@ -116,6 +117,7 @@ export default defineConfig({
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'Quick Start', link: '/en/guide' },
+          { text: 'Benchmark', link: '/en/benchmark' },
           { text: 'Examples', link: '/en/examples' },
           { text: 'Changelog', link: '/en/changelog' },
           { text: 'About', link: '/en/about' }

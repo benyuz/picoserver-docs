@@ -22,11 +22,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 1. 检查代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: 2. 设置 Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
       - name: 3. 安装 VitePress 依赖
@@ -34,9 +34,9 @@ jobs:
       - name: 4. 运行编译
         run: npm run docs:build
       - name: 5. 上传产物
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .vitepress/dist
       - name: 6. 正式发布
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
