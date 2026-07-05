@@ -240,7 +240,7 @@ End Function
 通过在控制器上打标签实现自动路由扫描。
 
 ::: tip 扩展包
-特性路由功能由 [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) 扩展包提供。
+特性路由功能由 [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) 扩展包提供，使用前请先安装。
 :::
 
 ::: code-group

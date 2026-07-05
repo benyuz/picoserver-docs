@@ -240,7 +240,7 @@ The cross-platform method `GetContentType(".ext")` produces strictly consistent 
 Implement automatic route scanning by tagging controllers.
 
 ::: tip Extension Package
-Attribute routing is provided by the [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) extension package.
+Attribute routing is provided by the [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) package. Please install it before use.
 :::
 
 ::: code-group
