@@ -29,7 +29,6 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 22
-          cache: 'npm'
       - name: 3. 安装 VitePress 依赖
         run: npm install
       - name: 4. 运行编译
