@@ -15,6 +15,9 @@ PicoServer, as a Web capability glue library, is supported by lightweight HTTP s
 
 > Recommended to use the latest version of PicoServer for complete functionality. Minimalist design with no breaking changes, safe to upgrade.
 
+## V1.7.6
+- ➕ JWT authentication adds Token blacklist feature, supporting `Add`, `IsBlacklisted`, `Remove`, `CleanExpired`, `StartAutoCleanup`, `StopAutoCleanup` methods, auto-cleanup expired entries (default 30 minutes), enabling secure token revocation.
+
 ## V1.7.5
 - ➕ `JwtHelper` adds new public method `VerifyToken(string token)`, complete JWT token validation (signature + exp), convenient for custom validation middleware.
 

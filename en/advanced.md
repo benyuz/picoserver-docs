@@ -667,6 +667,13 @@ MyAPI.Jwt.DecodePayload(token); // Decode JWT payload
 MyAPI.Jwt.GenerateToken(payload); // Create JWT token
 MyAPI.Jwt.VerifyToken(token); // Complete JWT token validation (signature + exp)
 
+MyAPI.Jwt.Blacklist.Add(token, exp); // Add token to blacklist
+MyAPI.Jwt.Blacklist.IsBlacklisted(token); // Check if token is blacklisted
+MyAPI.Jwt.Blacklist.Remove(token); // Remove token from blacklist
+MyAPI.Jwt.Blacklist.CleanExpired(); // Clean expired entries
+MyAPI.Jwt.Blacklist.StartAutoCleanup(); // Start auto cleanup (default 30 minutes)
+MyAPI.Jwt.Blacklist.StopAutoCleanup(); // Stop auto cleanup
+
 MyAPI.GetTimeStamp10(3600); // Get 10-digit timestamp, add 3600 seconds (1 hour)
 MyAPI.GetTimeStamp10();     // Get current 10-digit timestamp
 MyAPI.GetTimeStamp13();     // Get 13-digit timestamp (milliseconds)
@@ -682,10 +689,102 @@ MyAPI.Jwt.DecodePayload(token) ' Decode JWT payload
 MyAPI.Jwt.GenerateToken(payload) ' Create JWT token
 MyAPI.Jwt.VerifyToken(token) ' Complete JWT token validation (signature + exp)
 
+MyAPI.Jwt.Blacklist.Add(token, exp) ' Add token to blacklist
+MyAPI.Jwt.Blacklist.IsBlacklisted(token) ' Check if token is blacklisted
+MyAPI.Jwt.Blacklist.Remove(token) ' Remove token from blacklist
+MyAPI.Jwt.Blacklist.CleanExpired() ' Clean expired entries
+MyAPI.Jwt.Blacklist.StartAutoCleanup() ' Start auto cleanup (default 30 minutes)
+MyAPI.Jwt.Blacklist.StopAutoCleanup() ' Stop auto cleanup
+
 MyAPI.GetTimeStamp10(3600) ' Get 10-digit timestamp, add 3600 seconds (1 hour)
 MyAPI.GetTimeStamp10() ' Get current 10-digit timestamp
 MyAPI.GetTimeStamp13() ' Get 13-digit timestamp (milliseconds)
 MyAPI.GetTimeStamp13(500) ' Get 13-digit timestamp, add 500 milliseconds
+```
+
+:::
+
+### JWT Token Blacklist
+
+`AddJwtTokenVerify` automatically enables blacklist checking, no additional configuration required.
+
+#### Add Token to Blacklist (Logout)
+
+::: code-group
+
+```csharp [C#]
+MyAPI.MapPost("/api/logout", async (req, resp) =>
+{
+    var token = req.GetToken();
+    if (string.IsNullOrEmpty(token))
+    {
+        resp.StatusCode = 401;
+        await resp.WriteAsync("Token not provided");
+        return;
+    }
+
+    var payload = MyAPI.Jwt.DecodePayload(token);
+    var exp = ExtractExp(payload);
+    if (exp.HasValue)
+    {
+        MyAPI.Jwt.Blacklist.Add(token, exp.Value);
+        await resp.WriteAsync("Logout successful");
+    }
+});
+```
+
+```vb [VB.NET]
+MyAPI.MapPost("/api/logout", Async Function(req, resp)
+    Dim token = req.GetToken()
+    If String.IsNullOrEmpty(token) Then
+        resp.StatusCode = 401
+        Await resp.WriteAsync("Token not provided")
+        Return
+    End If
+
+    Dim payload = MyAPI.Jwt.DecodePayload(token)
+    Dim exp = ExtractExp(payload)
+    If exp.HasValue Then
+        MyAPI.Jwt.Blacklist.Add(token, exp.Value)
+        Await resp.WriteAsync("Logout successful")
+    End If
+End Function)
+```
+
+:::
+
+#### Auto Cleanup
+
+The blacklist automatically cleans up expired entries to avoid memory leaks.
+
+::: code-group
+
+```csharp [C#]
+MyAPI.Jwt.Blacklist.StartAutoCleanup(); // Start auto cleanup (default 30 minutes)
+MyAPI.Jwt.Blacklist.StopAutoCleanup();  // Stop auto cleanup
+```
+
+```vb [VB.NET]
+MyAPI.Jwt.Blacklist.StartAutoCleanup() ' Start auto cleanup (default 30 minutes)
+MyAPI.Jwt.Blacklist.StopAutoCleanup()  ' Stop auto cleanup
+```
+
+:::
+
+#### Manual Management
+
+::: code-group
+
+```csharp [C#]
+bool isBlacklisted = MyAPI.Jwt.Blacklist.IsBlacklisted(token); // Check if token is blacklisted
+MyAPI.Jwt.Blacklist.Remove(token);                            // Manually remove token
+MyAPI.Jwt.Blacklist.CleanExpired();                           // Manually clean expired entries
+```
+
+```vb [VB.NET]
+Dim isBlacklisted = MyAPI.Jwt.Blacklist.IsBlacklisted(token) ' Check if token is blacklisted
+MyAPI.Jwt.Blacklist.Remove(token)                            ' Manually remove token
+MyAPI.Jwt.Blacklist.CleanExpired()                           ' Manually clean expired entries
 ```
 
 :::

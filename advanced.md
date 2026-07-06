@@ -665,6 +665,13 @@ MyAPI.Jwt.DecodePayload(token); //解码 JWT 负载
 MyAPI.Jwt.GenerateToken(payload); //创建 JWT token
 MyAPI.Jwt.VerifyToken(token); //完整验证 JWT token（验签 + 验 exp）
 
+MyAPI.Jwt.Blacklist.Add(token, exp); //将 Token 加入黑名单
+MyAPI.Jwt.Blacklist.IsBlacklisted(token); //检查是否在黑名单
+MyAPI.Jwt.Blacklist.Remove(token); //从黑名单移除
+MyAPI.Jwt.Blacklist.CleanExpired(); //清理过期条目
+MyAPI.Jwt.Blacklist.StartAutoCleanup(); //启动自动清理（默认30分钟）
+MyAPI.Jwt.Blacklist.StopAutoCleanup(); //停止自动清理
+
 MyAPI.GetTimeStamp10(3600); // 获取10位时间戳，追加3600秒（1小时）
 MyAPI.GetTimeStamp10();     // 获取当前10位时间戳
 MyAPI.GetTimeStamp13();     // 获取13位时间戳（毫秒）
@@ -679,10 +686,102 @@ MyAPI.Jwt.DecodePayload(token) '解码 JWT 负载
 MyAPI.Jwt.GenerateToken(payload) '创建 JWT token
 MyAPI.Jwt.VerifyToken(token) '完整验证 JWT token（验签 + 验 exp）
 
+MyAPI.Jwt.Blacklist.Add(token, exp) '将 Token 加入黑名单
+MyAPI.Jwt.Blacklist.IsBlacklisted(token) '检查是否在黑名单
+MyAPI.Jwt.Blacklist.Remove(token) '从黑名单移除
+MyAPI.Jwt.Blacklist.CleanExpired() '清理过期条目
+MyAPI.Jwt.Blacklist.StartAutoCleanup() '启动自动清理（默认30分钟）
+MyAPI.Jwt.Blacklist.StopAutoCleanup() '停止自动清理
+
 MyAPI.GetTimeStamp10(3600) '获取10位时间戳，追加3600秒（1小时）
 MyAPI.GetTimeStamp10() '获取当前10位时间戳
 MyAPI.GetTimeStamp13() '获取13位时间戳（毫秒）
 MyAPI.GetTimeStamp13(500) '获取13位时间戳，追加500毫秒
+```
+:::
+
+### JWT Token 黑名单
+
+`AddJwtTokenVerify` 会自动启用黑名单检查，无需额外配置。
+
+#### 将 Token 加入黑名单（注销）
+
+::: code-group
+
+```csharp [C#]
+MyAPI.MapPost("/api/logout", async (req, resp) =>
+{
+    var token = req.GetToken();
+    if (string.IsNullOrEmpty(token))
+    {
+        resp.StatusCode = 401;
+        await resp.WriteAsync("未提供Token");
+        return;
+    }
+
+    var payload = MyAPI.Jwt.DecodePayload(token);
+    var exp = ExtractExp(payload);
+    if (exp.HasValue)
+    {
+        MyAPI.Jwt.Blacklist.Add(token, exp.Value);
+        await resp.WriteAsync("注销成功");
+    }
+});
+```
+
+```vb [VB.NET]
+MyAPI.MapPost("/api/logout", Async Function(req, resp)
+    Dim token = req.GetToken()
+    If String.IsNullOrEmpty(token) Then
+        resp.StatusCode = 401
+        Await resp.WriteAsync("未提供Token")
+        Return
+    End If
+
+    Dim payload = MyAPI.Jwt.DecodePayload(token)
+    Dim exp = ExtractExp(payload)
+    If exp.HasValue Then
+        MyAPI.Jwt.Blacklist.Add(token, exp.Value)
+        Await resp.WriteAsync("注销成功")
+    End If
+End Function)
+```
+
+:::
+
+#### 自动清理
+
+黑名单会自动清理已过期的条目，避免内存泄漏。
+
+::: code-group
+
+```csharp [C#]
+MyAPI.Jwt.Blacklist.StartAutoCleanup(); //启动自动清理（默认30分钟）
+MyAPI.Jwt.Blacklist.StopAutoCleanup();  //停止自动清理
+```
+
+```vb [VB.NET]
+MyAPI.Jwt.Blacklist.StartAutoCleanup() '启动自动清理（默认5分钟）
+MyAPI.Jwt.Blacklist.StopAutoCleanup()  '停止自动清理
+```
+
+:::
+
+#### 手动管理
+
+::: code-group
+
+```csharp [C#]
+bool isBlacklisted = MyAPI.Jwt.Blacklist.IsBlacklisted(token); //检查是否在黑名单
+MyAPI.Jwt.Blacklist.Remove(token);                            //手动移除
+MyAPI.Jwt.Blacklist.CleanExpired();                           //手动清理过期条目
+```
+
+```vb [VB.NET]
+Dim isBlacklisted = MyAPI.Jwt.Blacklist.IsBlacklisted(token) '检查是否在黑名单
+MyAPI.Jwt.Blacklist.Remove(token)                            '手动移除
+MyAPI.Jwt.Blacklist.CleanExpired()                           '手动清理过期条目
+```
 
 :::
 
