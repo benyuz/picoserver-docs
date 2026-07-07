@@ -1,12 +1,12 @@
 ---
 title: Basic Features - PicoServer
-description: PicoServer basic capabilities including routing, request/response handling, static file serving
+description: PicoServer basic capabilities including routing, parameters, response, static files, CORS, Cookie
 prev:
   text: Quick Start
   link: /en/guide
 next:
-  text: Advanced Features
-  link: /en/advanced
+  text: Data & Files
+  link: /en/data-file
 ---
 
 # ⚡ Basic Features
@@ -235,53 +235,7 @@ The cross-platform method `GetContentType(".ext")` produces strictly consistent 
 
 ---
 
-## 3. Attribute Routing
-
-Implement automatic route scanning by tagging controllers.
-
-::: tip Extension Package
-Attribute routing is provided by the [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) package. Please install it before use.
-:::
-
-::: code-group
-
-```csharp [C#]
-[ApiController]
-public class UserController
-{
-    [ApiRoute("/api/user", "GET")]
-    public async Task GetUser(HttpListenerRequest req, HttpListenerResponse res)
-    {
-        await res.WriteAsync("{\"id\":1,\"name\":\"John\"}", WebAPIServer.ContentType.ApplicationJson);
-    }
-}
-
-// Enable auto-scan registration in Main function
-private static readonly WebAPIServer MyAPI = new WebAPIServer();
-MyAPI.AutoRegisterRoutes();
-MyAPI.StartServer();
-```
-
-```vb [VB.NET]
-<ApiController>
-Public Class UserController
-    <ApiRoute("/api/user", "GET")>
-    Public Async Function GetUser(req As HttpListenerRequest, res As HttpListenerResponse) As Task
-        Await res.WriteAsync("{""id"":1,""name"":""John""}", WebAPIServer.ContentType.ApplicationJson)
-    End Function
-End Class
-
-' Enable auto-scan registration in Main function
-Private Shared ReadOnly MyAPI As New WebAPIServer()
-MyAPI.AutoRegisterRoutes()
-MyAPI.StartServer()
-```
-
-:::
-
----
-
-## 4. Static File Hosting and CORS
+## 3. Static File Hosting and CORS
 
 > Configure static file (HTML/CSS/JS/images/video) hosting for frontend page access and static resource serving scenarios.
 
@@ -341,7 +295,7 @@ MyAPI.AddCors("picoserver.cn");                    // Specify domain for CORS
 
 ---
 
-## 5. Semantic Routing and Service Control
+## 4. Semantic Routes and Service Control
 
 ### Semantic Routing (1.7+)
 
@@ -375,7 +329,7 @@ MyAPI.StopServer();                       // Stop server
 
 ---
 
-## 6. Cookie Management
+## 5. Cookie Management
 
 Built-in safe read/write mechanism that prevents null reference exceptions.
 

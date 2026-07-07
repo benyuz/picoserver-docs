@@ -71,13 +71,16 @@ export default defineConfig({
             text: '📚 使用示例',
             collapsed: true,
             items: [
-              { text: '基础能力', link: '/basic' },
-              { text: '高级能力（含鉴权）', link: '/advanced' },
-              { text: '自定义中间件', link: '/middleware' }
+              { text: '⚡ 基础能力', link: '/basic' },
+              { text: '📁 数据与文件', link: '/data-file' },
+              { text: '🔄 实时通信', link: '/realtime' },
+              { text: '🔐 安全与鉴权', link: '/security' },
+              { text: '🔧 高级定制', link: '/advanced' },
+              { text: '📦 扩展包', link: '/extensions' }
             ]
           },
           {
-            text: ' 性能测试',
+            text: '⏱️ 性能测试',
             link: '/benchmark'
           },
           {
@@ -125,7 +128,7 @@ export default defineConfig({
         sidebar: [
           {
             text: '📖 Getting Started',
-            collapsed: true,
+            collapsed: false,
             items: [
               { text: 'Introduction', link: '/en/' },
               { text: 'Quick Start', link: '/en/guide' }
@@ -135,13 +138,16 @@ export default defineConfig({
             text: '📚 Usage Examples',
             collapsed: true,
             items: [
-              { text: 'Basic Features', link: '/en/basic' },
-              { text: 'Advanced Features (Auth)', link: '/en/advanced' },
-              { text: 'Custom Middleware', link: '/en/middleware' }
+              { text: '⚡ Basic Features', link: '/en/basic' },
+              { text: '📁 Data & Files', link: '/en/data-file' },
+              { text: '🔄 Real-time Communication', link: '/en/realtime' },
+              { text: '🔐 Security & Auth', link: '/en/security' },
+              { text: '🔧 Advanced Customization', link: '/en/advanced' },
+              { text: '📦 Extensions', link: '/en/extensions' }
             ]
           },
           {
-            text: ' Benchmark',
+            text: '⏱️ Benchmark',
             link: '/en/benchmark'
           },
           {

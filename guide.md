@@ -92,3 +92,14 @@ curl http://127.0.0.1:8090
 ```
 
 返回 `Hello PicoServer` 即表示安装成功。
+
+---
+
+## 📚 文档导航
+
+- **[基础能力](/basic)** — 路由、参数、响应、静态文件、CORS、Cookie
+- **[数据与文件](/data-file)** — 文件上传/下载、流媒体
+- **[实时通信](/realtime)** — SSE、长连接、WebSocket
+- **[安全与鉴权](/security)** — Token、JWT、黑名单、加密
+- **[高级定制](/advanced)** — 自定义中间件、动态路由
+- **[扩展包](/extensions)** — 特性路由、AOT兼容性

@@ -1,12 +1,12 @@
 ---
 title: 基础能力 - PicoServer
-description: PicoServer 基础能力详解，包括路由、请求响应处理、静态文件服务等
+description: PicoServer 基础能力详解，包括路由、参数、响应、静态文件、CORS、Cookie
 prev:
-  text: 快速入门（含安装）
+  text: 快速入门
   link: /guide
 next:
-  text: 高级能力（含鉴权）
-  link: /advanced
+  text: 数据与文件
+  link: /data-file
 ---
 
 # ⚡ 基础能力
@@ -235,53 +235,7 @@ End Function
 
 ---
 
-## 3. 特性路由 (Declarative Routing)
-
-通过在控制器上打标签实现自动路由扫描。
-
-::: tip 扩展包
-特性路由功能由 [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) 扩展包提供，使用前请先安装。
-:::
-
-::: code-group
-
-```csharp [C#]
-[ApiController]
-public class UserController
-{
-    [ApiRoute("/api/user", "GET")]
-    public async Task GetUser(HttpListenerRequest req, HttpListenerResponse res)
-    {
-        await res.WriteAsync("{\"id\":1,\"name\":\"张三\"}", WebAPIServer.ContentType.ApplicationJson);
-    }
-}
-
-// 在 Main 函数中一键开启自动扫描注册
-private static readonly WebAPIServer MyAPI = new WebAPIServer();
-MyAPI.AutoRegisterRoutes();
-MyAPI.StartServer();
-```
-
-```vb
-<ApiController>
-Public Class UserController
-    <ApiRoute("/api/user", "GET")>
-    Public Async Function GetUser(req As HttpListenerRequest, res As HttpListenerResponse) As Task
-        Await res.WriteAsync("{""id"":1,""name"":""张三""}", WebAPIServer.ContentType.ApplicationJson)
-    End Function
-End Class
-
-' 在 Main 函数中一键开启自动扫描注册
-Private Shared ReadOnly MyAPI As New WebAPIServer()
-MyAPI.AutoRegisterRoutes()
-MyAPI.StartServer()
-```
-
-:::
-
----
-
-## 4. 静态文件托管与 CORS 跨域
+## 3. 静态文件托管与 CORS 跨域
 
 > 静态文件（HTML/CSS/JS/图片/视频）托管配置，适配前端页面直接访问、静态资源服务等场景。
 
@@ -341,7 +295,7 @@ MyAPI.AddCors("picoserver.cn");                    // 指定域名跨域
 
 ---
 
-## 5. 语义化路由与服务控制
+## 4. 语义化路由与服务控制
 
 ### 语义化路由（1.7+）
 
@@ -375,7 +329,7 @@ MyAPI.StopServer();                       // 停止服务
 
 ---
 
-## 6. Cookie 管理
+## 5. Cookie 管理
 
 内置防空指针引用的安全读写机制。
 

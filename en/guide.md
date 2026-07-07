@@ -90,3 +90,14 @@ curl http://127.0.0.1:8090
 ```
 
 A response of `Hello PicoServer` means the installation was successful.
+
+---
+
+## 📚 Documentation Navigation
+
+- **[Basic Features](/en/basic)** — Routing, Parameters, Response, Static Files, CORS, Cookie
+- **[Data & Files](/en/data-file)** — File Upload/Download, Streaming
+- **[Real-time Communication](/en/realtime)** — SSE, Long Connection, WebSocket
+- **[Security & Auth](/en/security)** — Token, JWT, Blacklist, Encryption
+- **[Advanced Customization](/en/advanced)** — Custom Middleware, Dynamic Routing
+- **[Extensions](/en/extensions)** — Attribute Routing, AOT Compatibility
