@@ -214,6 +214,8 @@ MyAPI.GetTimeStamp13(500) ' 13-digit + 500ms
 
 `AddJwtTokenVerify` automatically enables blacklist checking.
 
+**Use Cases**: User logout, password change, account ban - scenarios where issued tokens need to be immediately invalidated to prevent abuse.
+
 ### Add Token to Blacklist (Logout)
 
 ::: code-group
