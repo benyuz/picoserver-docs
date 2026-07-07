@@ -23,50 +23,55 @@ dotnet add package PicoServer.Extensions
 
 ### 特性路由
 
-使用特性路由可以通过标注特性来定义路由，更加直观和集中。
+通过在控制器上打标签实现自动路由扫描，更加直观和集中。
 
 ::: code-group
 
 ```csharp [C#]
 using PicoServer.Extensions;
 
-[RoutePrefix("/api/user")]
+[ApiController]
 public class UserController
 {
-    [HttpGet("info")]
-    public async Task GetUserInfo(HttpListenerRequest request, HttpListenerResponse response)
+    [ApiRoute("/api/user", "GET")]
+    public async Task GetUser(HttpListenerRequest req, HttpListenerResponse res)
     {
-        await response.WriteAsync(@"{""code"":1, ""msg"":""success""}");
+        await res.WriteAsync("{\"id\":1,\"name\":\"张三\"}", WebAPIServer.ContentType.ApplicationJson);
     }
 
-    [HttpPost("save")]
-    public async Task SaveUser(HttpListenerRequest request, HttpListenerResponse response)
+    [ApiRoute("/api/user", "POST")]
+    public async Task SaveUser(HttpListenerRequest req, HttpListenerResponse res)
     {
-        await response.WriteAsync(@"{""code"":1, ""msg"":""saved""}");
+        await res.WriteAsync("{\"code\":1,\"msg\":\"saved\"}", WebAPIServer.ContentType.ApplicationJson);
     }
 }
 
-// 注册特性路由
-MyAPI.MapControllers(typeof(UserController));
+// 在 Main 函数中一键开启自动扫描注册
+private static readonly WebAPIServer MyAPI = new WebAPIServer();
+MyAPI.AutoRegisterRoutes();
+MyAPI.StartServer();
 ```
 
 ```vb [VB.NET]
 Imports PicoServer.Extensions
 
-<RoutePrefix("/api/user")>
+<ApiController>
 Public Class UserController
-    <HttpGet("info")>
-    Public Async Function GetUserInfo(request As HttpListenerRequest, response As HttpListenerResponse) As Task
-        Await response.WriteAsync("{""code"":1, ""msg"":""success""}")
+    <ApiRoute("/api/user", "GET")>
+    Public Async Function GetUser(req As HttpListenerRequest, res As HttpListenerResponse) As Task
+        Await res.WriteAsync("{""id"":1,""name"":""张三""}", WebAPIServer.ContentType.ApplicationJson)
     End Function
 
-    <HttpPost("save")>
-    Public Async Function SaveUser(request As HttpListenerRequest, response As HttpListenerResponse) As Task
-        Await response.WriteAsync("{""code"":1, ""msg"":""saved""}")
+    <ApiRoute("/api/user", "POST")>
+    Public Async Function SaveUser(req As HttpListenerRequest, res As HttpListenerResponse) As Task
+        Await res.WriteAsync("{""code"":1,""msg"":""saved""}", WebAPIServer.ContentType.ApplicationJson)
     End Function
 End Class
 
-MyAPI.MapControllers(GetType(UserController))
+' 在 Main 函数中一键开启自动扫描注册
+Private Shared ReadOnly MyAPI As New WebAPIServer()
+MyAPI.AutoRegisterRoutes()
+MyAPI.StartServer()
 ```
 
 :::
