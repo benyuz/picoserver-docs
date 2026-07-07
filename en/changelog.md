@@ -16,7 +16,7 @@ PicoServer, as a Web capability glue library, is supported by lightweight HTTP s
 > Recommended to use the latest version of PicoServer for complete functionality. Minimalist design with no breaking changes, safe to upgrade.
 
 ## V1.7.6
-- ➕ JWT authentication adds Token blacklist feature, supporting `Add`, `IsBlacklisted`, `Remove`, `CleanExpired` methods, enabling secure token revocation.
+- ➕ JWT authentication adds Token blacklist feature, supporting `Add`, `IsBlacklisted`, `Remove`, `CleanExpired` methods, enabling secure token revocation. See [Security & Auth](/en/security) for details.
 - ➕ `AddJwtTokenVerify` adds `CleanupIntervalMinutes` parameter to control blacklist auto-cleanup interval (minutes). Default is `0`, meaning no auto cleanup.
 
 ## V1.7.5
@@ -37,7 +37,7 @@ PicoServer, as a Web capability glue library, is supported by lightweight HTTP s
 ## V1.7
 - ➕ `WebAPIServer` main class adds four semantic methods: `MapGet`, `MapPost`, `MapPut`, `MapDelete`, wrapped on top of `AddRoute` base method for better development experience.
 
-> 📚 Guide (C# / VB.NET): [Basic Features](/en/basic) · [Advanced Features](/en/advanced)
+> 📚 Guide (C# / VB.NET): [Basic Features](/en/basic) · [Data & Files](/en/data-file) · [Real-time Communication](/en/realtime) · [Security & Auth](/en/security) · [Advanced Customization](/en/advanced) · [Extensions](/en/extensions)
 
 ## V1.6.5
 - ➕ AddStaticFiles middleware adds built-in caching. Uses file fingerprint automatic verification to ensure synchronization when files change, while supporting strong cache duration settings, seamless switching between test and production environments.
