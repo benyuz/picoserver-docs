@@ -11,6 +11,8 @@ next:
 
 # 🔄 Real-time Communication
 
+> Supports SSE, long connection, and WebSocket for bidirectional/unidirectional real-time data push scenarios.
+
 ## 1. SSE (Server-Sent Events)
 
 High-frequency, low-latency one-way push for IoT and monitoring scenarios.

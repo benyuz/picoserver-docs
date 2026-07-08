@@ -11,7 +11,7 @@ next:
 
 # 📦 Extensions
 
-[PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) provides two core features: Attribute Routing and API Documentation Generation.
+> [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) provides two core features: Attribute Routing and API Documentation Generation.
 
 ## Installation
 
@@ -27,7 +27,9 @@ Define routes with attributes for cleaner and more centralized code.
 
 ### Quick Start
 
-```csharp
+::: code-group
+
+```csharp [C#]
 using PicoServer.Extensions;
 
 [ApiController]
@@ -52,9 +54,7 @@ MyAPI.AutoRegisterRoutes();
 MyAPI.StartServer();
 ```
 
-### VB.NET Example
-
-```vb
+```vb [VB.NET]
 Imports PicoServer.Extensions
 
 <ApiController>
@@ -74,6 +74,8 @@ Private Shared ReadOnly MyAPI As New WebAPIServer()
 MyAPI.AutoRegisterRoutes()
 MyAPI.StartServer()
 ```
+
+:::
 
 ---
 
@@ -145,7 +147,9 @@ app.EnableApiDocs(route: "/api-docs", saveToPath: "./docs/api.html");
 
 ### Complete Example
 
-```csharp
+::: code-group
+
+```csharp [C#]
 /// <summary>
 /// Create user
 /// </summary>
@@ -166,7 +170,7 @@ public async Task CreateUser(HttpListenerRequest req, HttpListenerResponse resp)
 }
 ```
 
-```vb
+```vb [VB.NET]
 ''' <summary>
 ''' Create user
 ''' </summary>
@@ -185,6 +189,8 @@ Public Async Function CreateUser(req As HttpListenerRequest, resp As HttpListene
     ' ...
 End Function
 ```
+
+:::
 
 ### Page Features
 

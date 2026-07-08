@@ -1,4 +1,4 @@
-﻿---
+---
 title: 扩展包 - PicoServer
 description: PicoServer.Extensions 扩展包使用说明
 prev:
@@ -11,7 +11,7 @@ next:
 
 # 📦 扩展包
 
-[PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) 扩展包提供特性路由和 API 文档生成两大核心功能。
+> [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) 扩展包提供特性路由和 API 文档生成两大核心功能。
 
 ## 安装
 
@@ -27,7 +27,9 @@ dotnet add package PicoServer.Extensions
 
 ### 快速开始
 
-```csharp
+::: code-group
+
+```csharp [C#]
 using PicoServer.Extensions;
 
 [ApiController]
@@ -51,9 +53,7 @@ MyAPI.AutoRegisterRoutes();
 MyAPI.StartServer();
 ```
 
-### VB.NET 示例
-
-```vb
+```vb [VB.NET]
 Imports PicoServer.Extensions
 
 <ApiController>
@@ -73,6 +73,8 @@ Private Shared ReadOnly MyAPI As New WebAPIServer()
 MyAPI.AutoRegisterRoutes()
 MyAPI.StartServer()
 ```
+
+:::
 
 ---
 
@@ -145,7 +147,9 @@ app.EnableApiDocs(route: "/api-docs", saveToPath: "./docs/api.html");
 
 ### 完整示例
 
-```csharp
+::: code-group
+
+```csharp [C#]
 /// <summary>
 /// 创建用户
 /// </summary>
@@ -166,7 +170,7 @@ public async Task CreateUser(HttpListenerRequest req, HttpListenerResponse resp)
 }
 ```
 
-```vb
+```vb [VB.NET]
 ''' <summary>
 ''' 创建用户
 ''' </summary>
@@ -185,6 +189,8 @@ Public Async Function CreateUser(req As HttpListenerRequest, resp As HttpListene
     ' ...
 End Function
 ```
+
+:::
 
 ### 页面功能
 

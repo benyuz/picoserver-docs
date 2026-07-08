@@ -11,6 +11,8 @@ next:
 
 # 📁 Data & Files
 
+> Provides file upload/download, streaming capabilities with fully async streaming architecture and minimal memory overhead.
+
 ## 1. File Upload & Download
 
 PicoServer uses fully async streaming non-blocking architecture for file handling, with extremely low memory overhead.

@@ -11,6 +11,8 @@ next:
 
 # ⚡ Basic Features
 
+> Covers core HTTP server capabilities including routing, parameter parsing, response handling, static file hosting, CORS, and Cookie management.
+
 ## 1. Route Control and Request Parameter Parsing
 
 PicoServer supports four routing styles: **Exact Route, Wildcard Route, RESTful Style Route, and Attribute Routing**.
