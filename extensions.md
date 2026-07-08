@@ -1,6 +1,6 @@
 ---
 title: 扩展包 - PicoServer
-description: PicoServer.Extensions 扩展包使用说明，包含特性路由和 API 文档生成
+description: PicoServer.Extensions 扩展包使用说明
 prev:
   text: 高级定制
   link: /advanced
@@ -11,23 +11,23 @@ next:
 
 # 📦 扩展包
 
-## PicoServer.Extensions
+[PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) 扩展包提供特性路由和 API 文档生成两大核心功能。
 
-特性路由功能由 [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) 扩展包提供。使用前请先安装。
-
-### 安装
+## 安装
 
 ```bash
 dotnet add package PicoServer.Extensions
 ```
 
-### 特性路由
+---
+
+## 特性路由
 
 通过在控制器上打标签实现自动路由扫描，更加直观和集中。
 
-::: code-group
+### 快速开始
 
-```csharp [C#]
+```csharp
 using PicoServer.Extensions;
 
 [ApiController]
@@ -52,7 +52,9 @@ MyAPI.AutoRegisterRoutes();
 MyAPI.StartServer();
 ```
 
-```vb [VB.NET]
+### VB.NET 示例
+
+```vb
 Imports PicoServer.Extensions
 
 <ApiController>
@@ -68,19 +70,16 @@ Public Class UserController
     End Function
 End Class
 
-' 在 Main 函数中一键开启自动扫描注册
 Private Shared ReadOnly MyAPI As New WebAPIServer()
 MyAPI.AutoRegisterRoutes()
 MyAPI.StartServer()
 ```
 
-:::
-
 ---
 
 ## API 文档生成
 
-PicoServer 支持自动生成 API 文档，只需要在代码中写好 `///` 注释，即可生成美观的在线文档页面。
+支持自动生成 API 文档，只需要在代码中写好 `///` 注释，即可生成美观的在线文档页面。
 
 ### 快速开始
 

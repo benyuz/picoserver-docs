@@ -1,6 +1,6 @@
 ---
 title: Extensions - PicoServer
-description: PicoServer.Extensions usage, including attribute routing and API documentation generation
+description: PicoServer.Extensions usage
 prev:
   text: Advanced Customization
   link: /en/advanced
@@ -11,23 +11,23 @@ next:
 
 # 📦 Extensions
 
-## PicoServer.Extensions
+[PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) provides two core features: Attribute Routing and API Documentation Generation.
 
-Attribute routing is provided by [PicoServer.Extensions](https://www.nuget.org/packages/PicoServer.Extensions) package. Install first before use.
-
-### Installation
+## Installation
 
 ```bash
 dotnet add package PicoServer.Extensions
 ```
 
-### Attribute Routing
+---
+
+## Attribute Routing
 
 Define routes with attributes for cleaner and more centralized code.
 
-::: code-group
+### Quick Start
 
-```csharp [C#]
+```csharp
 using PicoServer.Extensions;
 
 [ApiController]
@@ -52,7 +52,9 @@ MyAPI.AutoRegisterRoutes();
 MyAPI.StartServer();
 ```
 
-```vb [VB.NET]
+### VB.NET Example
+
+```vb
 Imports PicoServer.Extensions
 
 <ApiController>
@@ -68,19 +70,16 @@ Public Class UserController
     End Function
 End Class
 
-' Auto scan and register all attribute routes
 Private Shared ReadOnly MyAPI As New WebAPIServer()
 MyAPI.AutoRegisterRoutes()
 MyAPI.StartServer()
 ```
 
-:::
-
 ---
 
 ## API Documentation Generation
 
-PicoServer supports automatic API documentation generation. Simply write `///` comments in your code, and beautiful online documentation pages will be generated.
+Supports automatic API documentation generation. Simply write `///` comments in your code, and beautiful online documentation pages will be generated.
 
 ### Quick Start
 
