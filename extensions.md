@@ -1,6 +1,6 @@
 ---
 title: 扩展包 - PicoServer
-description: PicoServer.Extensions 特性路由扩展包使用说明
+description: PicoServer.Extensions 扩展包使用说明，包含特性路由和 API 文档生成
 prev:
   text: 高级定制
   link: /advanced
@@ -75,3 +75,107 @@ MyAPI.StartServer()
 ```
 
 :::
+
+---
+
+## API 文档生成
+
+PicoServer 支持自动生成 API 文档，只需要在代码中写好 `///` 注释，即可生成美观的在线文档页面。
+
+### 快速开始
+
+```csharp
+var app = new WebAPIServer();
+
+app.MapGet("/api/user", ListUsers);
+app.MapPost("/api/user", CreateUser);
+
+app.EnableApiDocs();
+
+app.StartServer();
+```
+
+启动后访问 `http://localhost:8090/docs` 即可查看。
+
+### 用法示例
+
+```csharp
+app.EnableApiDocs();
+
+app.EnableApiDocs(route: "/api-docs");
+
+app.EnableApiDocs(saveToPath: "./docs/api.html");
+
+app.EnableApiDocs(route: "/api-docs", saveToPath: "./docs/api.html");
+```
+
+### 参数说明
+
+| 参数 | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| `route` | `string` | `"/docs"` | 文档页面路由 |
+| `saveToPath` | `string` | `null` | 静态 HTML 保存路径，不传则不保存 |
+
+### 注释写法
+
+**基础注释**
+
+```csharp
+/// <summary>
+/// 获取用户列表
+/// </summary>
+/// <returns>返回用户列表</returns>
+```
+
+**请求参数**
+
+```csharp
+/// <request name="page" type="int" required="false" from="query">页码，默认1</request>
+/// <request name="name" type="string" required="true" from="body">用户名</request>
+```
+
+| 属性 | 说明 | 可选值 |
+|------|------|--------|
+| `name` | 参数名 | 必填 |
+| `type` | 参数类型 | `string`、`int`、`bool`、`array`、`object` |
+| `required` | 是否必选 | `true` / `false`，默认 `false` |
+| `from` | 参数来源 | `query` / `body` / `path`，默认 `query` |
+
+**返回示例**
+
+```csharp
+/// <response>
+/// { "id": 1, "name": "张三" }
+/// </response>
+```
+
+### 完整示例
+
+```csharp
+/// <summary>
+/// 创建用户
+/// </summary>
+/// <returns>返回创建的用户信息</returns>
+/// <request name="name" type="string" required="true" from="body">用户名</request>
+/// <request name="email" type="string" required="true" from="body">邮箱</request>
+/// <response>
+/// {
+///   "id": 1,
+///   "name": "张三",
+///   "email": "zhangsan@example.com"
+/// }
+/// </response>
+[ApiRoute("/api/user", "POST")]
+public async Task CreateUser(HttpListenerRequest req, HttpListenerResponse resp)
+{
+    // ...
+}
+```
+
+### 页面功能
+
+文档页面支持在线测试，点击"试一下"可直接发起请求并查看响应。参数在表格中填写后会自动拼接到请求中。页面顶部可按控制器分组筛选，也支持按路径或描述搜索。BaseURL 支持在顶部直接编辑，方便切换不同环境。返回的 JSON 响应会自动格式化并高亮显示。此外，通过 `saveToPath` 参数可将文档导出为静态 HTML 文件。
+
+### 注意事项
+
+启用文档功能前，需确保项目已开启 XML 文档生成（`GenerateDocumentationFile`），否则无法读取注释信息。`EnableApiDocs` 必须在所有路由注册完毕后调用。另外，使用 Lambda 表达式注册的路由无法获取注释，建议改用显式方法。免费版支持星号（`*`）通配符路由。
