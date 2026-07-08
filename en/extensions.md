@@ -166,6 +166,26 @@ public async Task CreateUser(HttpListenerRequest req, HttpListenerResponse resp)
 }
 ```
 
+```vb
+''' <summary>
+''' Create user
+''' </summary>
+''' <returns>Returns created user info</returns>
+''' <request name="name" type="string" required="true" from="body">User name</request>
+''' <request name="email" type="string" required="true" from="body">Email</request>
+''' <response>
+''' {
+'''   "id": 1,
+'''   "name": "Zhang",
+'''   "email": "zhang@example.com"
+''' }
+''' </response>
+<ApiRoute("/api/user", "POST")>
+Public Async Function CreateUser(req As HttpListenerRequest, resp As HttpListenerResponse) As Task
+    ' ...
+End Function
+```
+
 ### Page Features
 
 The documentation page supports online testing. Click "Try it" to send requests and view responses. Parameters entered in the table are automatically appended to the request. Routes can be filtered by controller group at the top, or searched by path/description. BaseURL is editable at the top for easy environment switching. JSON responses are automatically formatted and highlighted. Additionally, the documentation can be exported as a static HTML file via the `saveToPath` parameter.

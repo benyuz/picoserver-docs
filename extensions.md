@@ -1,4 +1,4 @@
----
+﻿---
 title: 扩展包 - PicoServer
 description: PicoServer.Extensions 扩展包使用说明
 prev:
@@ -46,7 +46,6 @@ public class UserController
     }
 }
 
-// 在 Main 函数中一键开启自动扫描注册
 private static readonly WebAPIServer MyAPI = new WebAPIServer();
 MyAPI.AutoRegisterRoutes();
 MyAPI.StartServer();
@@ -99,16 +98,17 @@ app.StartServer();
 ### 用法示例
 
 ```csharp
+// 默认在线文档路由为"/docs"
 app.EnableApiDocs();
-
+// 自定义文档路由为"/api-docs"
 app.EnableApiDocs(route: "/api-docs");
-
+// 保存文档为静态 HTML 文件
 app.EnableApiDocs(saveToPath: "./docs/api.html");
-
+// 自定义文档路由为"/api-docs"，并保存为静态 HTML 文件
 app.EnableApiDocs(route: "/api-docs", saveToPath: "./docs/api.html");
 ```
 
-`route` 为文档页面路由，默认 `"/docs"`；`saveToPath` 为静态 HTML 保存路径，不传则不保存。
+> `route` 为文档页面路由，默认 `"/docs"`；`saveToPath` 为静态 HTML 保存路径，不传则不保存。
 
 ### 注释写法
 
@@ -164,6 +164,26 @@ public async Task CreateUser(HttpListenerRequest req, HttpListenerResponse resp)
 {
     // ...
 }
+```
+
+```vb
+''' <summary>
+''' 创建用户
+''' </summary>
+''' <returns>返回创建的用户信息</returns>
+''' <request name="name" type="string" required="true" from="body">用户名</request>
+''' <request name="email" type="string" required="true" from="body">邮箱</request>
+''' <response>
+''' {
+'''   "id": 1,
+'''   "name": "张三",
+'''   "email": "zhangsan@example.com"
+''' }
+''' </response>
+<ApiRoute("/api/user", "POST")>
+Public Async Function CreateUser(req As HttpListenerRequest, resp As HttpListenerResponse) As Task
+    ' ...
+End Function
 ```
 
 ### 页面功能
