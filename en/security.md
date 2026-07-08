@@ -90,8 +90,6 @@ MyAPI.AddSimpleTokenVerify(testToken); // Add simple token middleware
 request.GetToken(); // Get token from header
 ```
 
----
-
 ## 3. JWT Auth
 
 ::: code-group
@@ -208,8 +206,6 @@ MyAPI.GetTimeStamp13(500) ' 13-digit + 500ms
 
 :::
 
----
-
 ## 4. JWT Token Blacklist
 
 `AddJwtTokenVerify` automatically enables blacklist checking.
@@ -309,8 +305,6 @@ MyAPI.Jwt.Blacklist.CleanExpired(); // Clean expired entries
 MyAPI.Jwt.Blacklist.StartAutoCleanup(); // Start auto cleanup
 MyAPI.Jwt.Blacklist.StopAutoCleanup(); // Stop auto cleanup
 ```
-
----
 
 ## 5. Encryption Tools
 

@@ -19,8 +19,6 @@ next:
 dotnet add package PicoServer.Extensions
 ```
 
----
-
 ## Attribute Routing
 
 Define routes with attributes for cleaner and more centralized code.
@@ -76,8 +74,6 @@ MyAPI.StartServer()
 ```
 
 :::
-
----
 
 ## API Documentation Generation
 

@@ -122,8 +122,6 @@ request.SaveFileAsync(filePath); // Save to specified path
 request.SaveFileAsync(filePath, onProgress); // With progress callback
 ```
 
----
-
 ## 2. Streaming / Live Streaming
 
 ::: code-group

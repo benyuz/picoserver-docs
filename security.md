@@ -90,8 +90,6 @@ MyAPI.AddSimpleTokenVerify(testToken); //添加简单 token 验证中间件
 request.GetToken(); //获取请求头中的 token 值
 ```
 
----
-
 ## 3. JWT 鉴权
 
 ::: code-group
@@ -208,8 +206,6 @@ MyAPI.GetTimeStamp13(500) '获取13位时间戳，追加500毫秒
 
 :::
 
----
-
 ## 4. JWT Token 黑名单
 
 `AddJwtTokenVerify` 会自动启用黑名单检查，无需额外配置。
@@ -309,8 +305,6 @@ MyAPI.Jwt.Blacklist.CleanExpired(); //清理过期条目
 MyAPI.Jwt.Blacklist.StartAutoCleanup(); //启动自动清理（默认30分钟）
 MyAPI.Jwt.Blacklist.StopAutoCleanup(); //停止自动清理
 ```
-
----
 
 ## 5. 加密工具
 

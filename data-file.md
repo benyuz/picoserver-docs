@@ -122,8 +122,6 @@ request.SaveFileAsync(filePath); // 保存文件到指定路径
 request.SaveFileAsync(filePath, onProgress); // 支持回调进度
 ```
 
----
-
 ## 2. 流媒体/直播流推送
 
 ::: code-group

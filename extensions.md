@@ -19,8 +19,6 @@ next:
 dotnet add package PicoServer.Extensions
 ```
 
----
-
 ## 特性路由
 
 通过在控制器上打标签实现自动路由扫描，更加直观和集中。
@@ -75,8 +73,6 @@ MyAPI.StartServer()
 ```
 
 :::
-
----
 
 ## API 文档生成
 

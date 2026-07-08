@@ -161,8 +161,6 @@ request.Items()                 ' Request context property dictionary, for middl
 
 :::
 
----
-
 ## 2. RESTful Style and MIME Type Resolution
 
 By checking the request's `HttpMethod`, you can complete full RESTful resource dispatch within a single route.
@@ -235,8 +233,6 @@ End Function
 The cross-platform method `GetContentType(".ext")` produces strictly consistent results on Windows/Linux/Docker containers. Text resources include `charset=UTF-8` by default. Supports 30+ common extensions (like video streams `.m3u8`, `.ts`, fonts `.woff2`, etc.). Unknown types default to safe stream `application/octet-stream`.
 :::
 
----
-
 ## 3. Static File Hosting and CORS
 
 > Configure static file (HTML/CSS/JS/images/video) hosting for frontend page access and static resource serving scenarios.
@@ -295,8 +291,6 @@ MyAPI.AddCors();                                   // Enable CORS
 MyAPI.AddCors("picoserver.cn");                    // Specify domain for CORS
 ```
 
----
-
 ## 4. Semantic Routes and Service Control
 
 ### Semantic Routing (1.7+)
@@ -328,8 +322,6 @@ MyAPI.StartServer("127.0.0.1");           // Localhost only
 MyAPI.StartServer("127.0.0.1", 8891);     // Localhost + specify port
 MyAPI.StopServer();                       // Stop server
 ```
-
----
 
 ## 5. Cookie Management
 
@@ -432,8 +424,6 @@ End Function
 ```
 
 :::
-
----
 
 ## 7. CORS Configuration
 
