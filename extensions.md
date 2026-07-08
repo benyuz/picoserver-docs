@@ -108,12 +108,7 @@ app.EnableApiDocs(saveToPath: "./docs/api.html");
 app.EnableApiDocs(route: "/api-docs", saveToPath: "./docs/api.html");
 ```
 
-### 参数说明
-
-| 参数 | 类型 | 默认值 | 说明 |
-|------|------|--------|------|
-| `route` | `string` | `"/docs"` | 文档页面路由 |
-| `saveToPath` | `string` | `null` | 静态 HTML 保存路径，不传则不保存 |
+`route` 为文档页面路由，默认 `"/docs"`；`saveToPath` 为静态 HTML 保存路径，不传则不保存。
 
 ### 注释写法
 

@@ -108,12 +108,7 @@ app.EnableApiDocs(saveToPath: "./docs/api.html");
 app.EnableApiDocs(route: "/api-docs", saveToPath: "./docs/api.html");
 ```
 
-### Parameters
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `route` | `string` | `"/docs"` | Documentation page route |
-| `saveToPath` | `string` | `null` | Static HTML save path. Omit to skip saving. |
+`route` is the documentation page route, default `"/docs"`; `saveToPath` is the static HTML save path, omit to skip saving.
 
 ### Comment Syntax
 
