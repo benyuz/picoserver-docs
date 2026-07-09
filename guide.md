@@ -10,8 +10,6 @@ next:
 
 > 默认监听端口为 `8090`。在 Windows 环境下运行如果绑定失败，请注意赋予应用管理员权限。推荐使用 **PicoServer** 最新版本保障功能完整性。
 
----
-
 ## 1. 安装 PicoServer
 
 在 Visual Studio 的 NuGet 包管理器中搜索 `PicoServer` 并安装，或在项目目录执行：
@@ -92,8 +90,6 @@ curl http://127.0.0.1:8090
 ```
 
 返回 `Hello PicoServer` 即表示安装成功。
-
----
 
 ## 📚 文档导航
 

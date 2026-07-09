@@ -103,8 +103,6 @@ function startSSE() {
 }
 ```
 
----
-
 ## 2. Long Connection Chunk Push
 
 ::: code-group
@@ -143,8 +141,6 @@ End Function
 ```
 
 :::
-
----
 
 ## 3. WebSocket Bidirectional Communication
 

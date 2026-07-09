@@ -103,8 +103,6 @@ function startSSE() {
 }
 ```
 
----
-
 ## 2. 长连接 Chunk 块推送
 
 ::: code-group
@@ -143,8 +141,6 @@ End Function
 ```
 
 :::
-
----
 
 ## 3. WebSocket 双向通信
 

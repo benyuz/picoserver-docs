@@ -25,8 +25,6 @@ next:
 
 PicoServer.Nano **不使用反射**，内存和 CPU 占用更低，把有限的资源留给业务。
 
----
-
 ## 快速开始
 
 ### 1. 环境准备
@@ -59,8 +57,6 @@ Console.WriteLine($"服务器已启动: http://{server.GetIPAddress()}/");
 ```
 
 编译部署，浏览器访问 `http://<设备IP>/hello` 即可看到响应。
-
----
 
 ## 核心能力一览
 
@@ -125,8 +121,6 @@ server.AddStaticFiles("/web", "I:\\www", maxAge: 3600);
 | `req.ReadBodyAsString()` | 读取请求体为字符串 |
 | `req.SaveFile(savePath)` | 保存上传文件 |
 
----
-
 ## 一致的 C# 开发体验
 
 **PicoServer** 在 Windows/Linux/macOS 上：
@@ -143,16 +137,12 @@ server.AddRoute("/hello", (req, res) => res.Write("Hello"));
 
 几乎是一套 API，让桌面端、云端、嵌入式微控制器拥有一致的 Web 开发体验。
 
----
-
 ## 注意事项
 
 1. **路径格式**：nanoFramework 中使用反斜杠 `\`，如 `"I:\\www"`
 2. **静态文件托管**：文件需部署到设备（生成操作设为"内容"），中间件按顺序执行，建议第一个添加
 3. **白名单**：路由加入白名单可跳过认证
 4. **长连接**：`WriteChunk` 推送结束后必须调用 `res.Close()`
-
----
 
 ## 资源链接
 

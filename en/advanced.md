@@ -17,8 +17,6 @@ next:
 >
 > **Note: Middleware executes in the order they are added.**
 
----
-
 ## 1. Custom Middleware
 
 ### Minimal File Server
@@ -89,8 +87,6 @@ Console.WriteLine("File server started: http://127.0.0.1:8090")
 ```
 
 :::
-
----
 
 ## 2. Dynamic Route Handler
 
@@ -164,8 +160,6 @@ MyAPI.StartServer(8090)
 ```
 
 :::
-
----
 
 ## 3. Extension Points
 

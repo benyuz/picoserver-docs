@@ -10,8 +10,6 @@ next:
 
 > Default listening port is `8090`. On Windows, if binding fails, make sure to grant the application administrator privileges. It is recommended to use the **latest version** of PicoServer to ensure full functionality.
 
----
-
 ## 1. Install PicoServer
 
 Search for `PicoServer` in Visual Studio's NuGet Package Manager and install it, or run the following in your project directory:
@@ -90,8 +88,6 @@ curl http://127.0.0.1:8090
 ```
 
 A response of `Hello PicoServer` means the installation was successful.
-
----
 
 ## 📚 Documentation Navigation
 

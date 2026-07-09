@@ -25,8 +25,6 @@ next:
 
 PicoServer.Nano **does not use reflection**, has lower memory and CPU footprint, leaving limited resources for business logic.
 
----
-
 ## Quick Start
 
 ### 1. Environment Setup
@@ -59,8 +57,6 @@ Console.WriteLine($"Server started: http://{server.GetIPAddress()}/");
 ```
 
 Compile and deploy, then visit `http://<device-IP>/hello` in browser to see the response.
-
----
 
 ## Core Capabilities
 
@@ -125,8 +121,6 @@ Visit `http://device-IP/web/index.html` to see the webpage.
 | `req.ReadBodyAsString()` | Read request body as string |
 | `req.SaveFile(savePath)` | Save uploaded file |
 
----
-
 ## Consistent C# Development Experience
 
 **PicoServer** on Windows/Linux/macOS:
@@ -143,16 +137,12 @@ server.AddRoute("/hello", (req, res) => res.Write("Hello"));
 
 Almost the same API, enabling consistent Web development experience across desktop, cloud, and embedded microcontrollers.
 
----
-
 ## Notes
 
 1. **Path Format**: Use backslash `\` in nanoFramework, e.g., `"I:\\www"`
 2. **Static File Hosting**: Files must be deployed to device (set build action to "Content"), middleware executes in order, recommended to add first
 3. **Whitelist**: Routes added to whitelist can skip authentication
 4. **Long Connection**: Must call `res.Close()` after `WriteChunk` push completes
-
----
 
 ## Resources
 
