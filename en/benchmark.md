@@ -2,8 +2,8 @@
 title: Benchmark - PicoServer
 description: PicoServer performance benchmark report including QPS, memory usage, CPU metrics
 prev:
-  text: Custom Middleware
-  link: /en/middleware
+  text: Extensions
+  link: /en/extensions
 next:
   text: PicoServer.Nano
   link: /en/nano-guide
@@ -11,11 +11,55 @@ next:
 
 # 📊 PicoServer Benchmark
 
-> 💖 **Test Notes**: Test results are based on PicoServer in **out-of-the-box state**, tested on a **laptop in balanced mode**. Results are for reference only. Verified for high concurrency, low CPU, and low memory consumption.
->
-> 💡 **About "Developer Benchmark"**
->
-> PicoServer publishes **performance data based on daily development environments** — developer laptops, battery-powered, balanced mode, entry-level I3 10th gen office computers, all zero tuning. This is not extreme stress testing in data centers, but results that any developer can reproduce with their own computer. Complementary to traditional "industrial benchmarks" (server hardware + expert tuning).
+::: tip 💖 Test Notes
+Test results are based on PicoServer in **out-of-the-box state**, tested on a **laptop in balanced mode**. Results are for reference only. Verified for high concurrency, low CPU, and low memory consumption.
+:::
+
+::: info 💡 About "Developer Benchmark"
+PicoServer publishes **performance data based on daily development environments** — developer laptops, battery-powered, balanced mode, entry-level I3 10th gen office computers, all zero tuning. This is not extreme stress testing in data centers, but results that any developer can reproduce with their own computer. Complementary to traditional "industrial benchmarks" (server hardware + expert tuning).
+:::
+
+## Key Metrics at a Glance
+
+<div class="metric-grid">
+
+<div class="metric-card">
+<div class="metric-value">69,487</div>
+<div class="metric-label">Peak QPS</div>
+<div class="metric-desc">50 concurrent / 15s stability test</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">1.9ms</div>
+<div class="metric-label">P99 Latency</div>
+<div class="metric-desc">50 concurrent stability test</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">0%</div>
+<div class="metric-label">Error Rate</div>
+<div class="metric-desc">Zero errors under load</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">~16 MB</div>
+<div class="metric-label">Memory Usage</div>
+<div class="metric-desc">Console app resident memory</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">10,000</div>
+<div class="metric-label">WebSocket Connections</div>
+<div class="metric-desc">Server memory only 398MB</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">Tens of KB</div>
+<div class="metric-label">Delivery Size</div>
+<div class="metric-desc">Single DLL, zero deps</div>
+</div>
+
+</div>
 
 ## Test Environment
 
@@ -82,3 +126,48 @@ Expected response: `{"code": 1, "msg": "Hello WebAPI"}`
 - **Out-of-the-box**: No additional tuning required, high performance in default state
 
 > 🛠️ Benchmark Tool: [hey](https://github.com/rakyll/hey) HTTP load testing tool
+
+<style>
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.metric-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  background: var(--vp-c-bg-soft);
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--vp-c-shadow);
+  border-color: var(--vp-c-brand);
+}
+
+.metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--vp-c-brand);
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+.metric-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+  color: var(--vp-c-text-1);
+}
+
+.metric-desc {
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+  margin-top: 4px;
+}
+</style>

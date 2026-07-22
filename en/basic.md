@@ -425,7 +425,7 @@ End Function
 
 :::
 
-## 7. CORS Configuration
+## 6. CORS Configuration
 
 > Solve cross-origin restrictions for frontend-backend separation, supports minimal configuration.
 

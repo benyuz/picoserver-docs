@@ -425,17 +425,20 @@ End Function
 
 :::
 
-## 7. 跨域配置（CORS）
+## 6. 跨域配置（CORS）
 
 > 解决前后端分离跨域限制，支持极简配置。
-:::code-group
-```csharp
+
+::: code-group
+
+```csharp [C#]
 MyAPI.AddCors();                    // 启用跨域，默认允许所有来源/方法/请求头
 MyAPI.AddCors("picoserver.cn");     // 指定允许的域名
 ```
-:::
-```vb
+
+```vb [VB.NET]
 MyAPI.AddCors()                    ' 启用跨域，默认允许所有来源/方法/请求头
 MyAPI.AddCors("picoserver.cn")     ' 指定允许的域名
 ```
+
 :::

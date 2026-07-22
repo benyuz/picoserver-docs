@@ -2,8 +2,8 @@
 title: 性能测试 - PicoServer
 description: PicoServer 性能测试报告，包含 QPS、内存占用、CPU 使用率等指标
 prev:
-  text: 自定义中间件
-  link: /middleware
+  text: 扩展包
+  link: /extensions
 next:
   text: PicoServer.Nano
   link: /nano-guide
@@ -11,11 +11,55 @@ next:
 
 # 📊 PicoServer 性能测试
 
-> 💖 **测试说明**：测试报告基于 PicoServer **开箱即用状态**、**笔记本平衡模式**测试所得，基于开发则结果仅供参考。已验证其高并发、低 CPU、低内存消耗的特点。
-> 
-> 💡 **关于"开发者基准"**
->
-> PicoServer 公开的是**基于日常开发环境的性能数据**——开发笔记本、电池供电、平衡模式，、I3 10代入门办公电脑，均为零调优。这不是数据中心里的极限压测，而是任何开发者用自己的电脑就能复现的结果。与传统"工业基准"（服务器硬件 + 专家调优）形成互补。
+::: tip 💖 测试说明
+测试报告基于 PicoServer **开箱即用状态**、**笔记本平衡模式**测试所得，基于开发环境，结果仅供参考。已验证其高并发、低 CPU、低内存消耗的特点。
+:::
+
+::: info 💡 关于"开发者基准"
+PicoServer 公开的是**基于日常开发环境的性能数据**——开发笔记本、电池供电、平衡模式，I3 10代入门办公电脑，均为零调优。这不是数据中心里的极限压测，而是任何开发者用自己的电脑就能复现的结果。与传统"工业基准"（服务器硬件 + 专家调优）形成互补。
+:::
+
+## 核心指标速览
+
+<div class="metric-grid">
+
+<div class="metric-card">
+<div class="metric-value">69,487</div>
+<div class="metric-label">峰值 QPS</div>
+<div class="metric-desc">50并发 / 15秒稳定性测试</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">1.9ms</div>
+<div class="metric-label">P99 延迟</div>
+<div class="metric-desc">50并发稳定性测试</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">0%</div>
+<div class="metric-label">错误率</div>
+<div class="metric-desc">高并发零错误</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">~16 MB</div>
+<div class="metric-label">内存占用</div>
+<div class="metric-desc">控制台程序常驻内存</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">10,000</div>
+<div class="metric-label">WebSocket 连接</div>
+<div class="metric-desc">服务器内存仅 398MB</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-value">几十 KB</div>
+<div class="metric-label">交付体积</div>
+<div class="metric-desc">单 DLL，零依赖</div>
+</div>
+
+</div>
 
 ## 测试环境
 
@@ -81,6 +125,49 @@ hey -c 50 -z 15s http://127.0.0.1:8090
 - **稳定可靠**：高并发场景下零错误率，P99 延迟低至 1.9ms
 - **开箱即用**：无额外调优配置，默认状态即可实现高性能
 
-
-
 > 🛠️ 压测工具：[hey](https://github.com/rakyll/hey) HTTP 负载测试工具
+
+<style>
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.metric-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  background: var(--vp-c-bg-soft);
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--vp-c-shadow);
+  border-color: var(--vp-c-brand);
+}
+
+.metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--vp-c-brand);
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+.metric-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+  color: var(--vp-c-text-1);
+}
+
+.metric-desc {
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+  margin-top: 4px;
+}
+</style>
